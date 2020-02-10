@@ -4,7 +4,7 @@ The metrics-widget has been released. This document will describe how to include
 
 ## Hosting of the Widget Code
 
-The Widget code consists of two files that are hosted on the Ubiquity Press CDN, https://storage.googleapis.com/hirmeos/metrics-widget/. These files are `hirmeos-metrics.css` and `hirmeos-metrics.min.js`.
+The Widget code consists of two files that are hosted on the Ubiquity Press CDN, https://storage.googleapis.com/operas/metrics-widget/. These files are `hirmeos-metrics.css` and `hirmeos-metrics.min.js`.
 
 ## Versioning and Updates to the the Widget code
 
@@ -20,7 +20,7 @@ Please remember to update **both** the CSS and JavaScript files when using a new
 The widget has been built using Bootstrap 4, as well as some custom CSS.
 ```
 <!-- load css for this app-->
-<link rel="stylesheet" href="https://storage.googleapis.com/hirmeos/metrics-widget/hirmeos-metrics-0.1.1.css">
+<link rel="stylesheet" href="https://storage.googleapis.com/operas/metrics-widget/hirmeos-metrics-0.1.1.css">
 
 <!--load bootstrap-->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -51,7 +51,7 @@ You will need to edit the values in `widget_params`.
 </script>
 
 <!-- load js for the Metrics Widget app-->
-<script src="https://storage.googleapis.com/hirmeos/metrics-widget/hirmeos-metrics-0.1.1.min.js"></script>
+<script src="https://storage.googleapis.com/operas/metrics-widget/hirmeos-metrics-0.1.1.min.js"></script>
 ```
 
 ## Widget customisation
@@ -61,7 +61,7 @@ The widget can be customised by setting values in the widget_params variable. Cu
 - `uri`: Required - The URI of the book / Chapter you want to display metrics for.
 - `locale`: Language code for locale that the widget should be displayed in (default is ‘en’).
 - `baseUrl`: Base URL for querying metrics. Can be set if you have a local instance of the metrics API (defaults to
- “https://metrics.ubiquity.press”).
+ “https://metrics-api.operas-eu.org”).
 - `WidgetTitle`: The title that appears on the widget (default is ‘Metrics’).
 - `showDetailedMetricsLink`: true or false, whether or not to display link to detailed metrics (if available; defaults
  to false).

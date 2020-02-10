@@ -21,7 +21,7 @@ Ubiquity Press has set up a CDN serving all the required libraries, except the H
 
 The CDN folders are structure as follows:
 ```
-https://storage.googleapis.com/hirmeos/<version>/<name>
+https://storage.googleapis.com/operas/<version>/<name>
 ```
 
 Where:
@@ -34,10 +34,10 @@ The following table contains a list of the available libraries:
 
 | library       | public link                                             |
 | ------------- | ------------------------------------------------------- |
-| epub.js 	    | https://storage.googleapis.com/hirmeos/v1/epub.js       |
-| epub.min.js   | https://storage.googleapis.com/hirmeos/v1/epub.min.js   |
-| pdf.js        | https://storage.googleapis.com/hirmeos/v1/pdf.js        |
-| pdf.worker.js | https://storage.googleapis.com/hirmeos/v1/pdf.worker.js |
+| epub.js 	    | https://storage.googleapis.com/operas/v1/epub.js       |
+| epub.min.js   | https://storage.googleapis.com/operas/v1/epub.min.js   |
+| pdf.js        | https://storage.googleapis.com/operas/v1/pdf.js        |
+| pdf.worker.js | https://storage.googleapis.com/operas/v1/pdf.worker.js |
 
 ## HTML
 
@@ -51,8 +51,8 @@ At the most basic level, the only resources required to enable annotations on an
 
 ```
 <script src="https://cdn.hypothes.is/hypothesis"></script>
-<script src="https://storage.googleapis.com/hirmeos/v1/jszip.min.js"></script>
-<script src="https://storage.googleapis.com/hirmeos/v1/epub.min.js"></script>
+<script src="https://storage.googleapis.com/operas/v1/jszip.min.js"></script>
+<script src="https://storage.googleapis.com/operas/v1/epub.min.js"></script>
 ```
 
 [This link](https://cdn.hypothes.is/demos/epub/epub.js/index.html?loc=titlepage.xhtml) hosted by Hypothes.is contains a working implementation. In the example, a function in `reader.js` is called
@@ -87,6 +87,6 @@ What happens next:
 
 The results are available on the HIRMEOS metrics, by source:
 ```
-https://metrics.ubiquity.press/api/altmetrics?uri=10.5334/dsj-2016-006&view=source&source=hypothesis
+https://metrics-api.operas-eu.org/api/altmetrics?uri=10.5334/dsj-2016-006&view=source&source=hypothesis
 ```
 
