@@ -18,6 +18,9 @@ import wikiversityEnGB from './markdown/wikiversity.en-GB.md';
 import metricsApiEnGB from './markdown/metrics-api.en-GB.md';
 import countriesApiEnGB from './markdown/countries-api.en-GB.md';
 import tokensApiEnGB from './markdown/tokens-api.en-GB.md';
+import annotationEnGB from './markdown/annotation.en-GB.md';
+import altmetricsEnGB from './markdown/altmetrics.en-GB.md';
+import widgetEnGB from './markdown/widget.en-GB.md';
 
 import gettingStartedElGR from './markdown/getting-started.el-GR.md';
 import translationSrvElGR from './markdown/identifier-translation-service.el-GR.md';
@@ -36,6 +39,9 @@ import wikiversityElGR from './markdown/wikiversity.el-GR.md';
 import metricsApiElGR from './markdown/metrics-api.el-GR.md';
 import countriesApiElGR from './markdown/countries-api.el-GR.md';
 import tokensApiElGR from './markdown/tokens-api.el-GR.md';
+import annotationElGR from './markdown/annotation.el-GR.md';
+import altmetricsElGR from './markdown/altmetrics.el-GR.md';
+import widgetElGR from './markdown/widget.el-GR.md';
 
 export const files = {
   'getting-started': {
@@ -105,6 +111,18 @@ export const files = {
   'tokens-api': {
     'en-GB': tokensApiEnGB,
     'el-GR': tokensApiElGR
+  },
+  'annotation': {
+    'en-GB': annotationEnGB,
+    'el-GR': annotationElGR
+  },
+  'altmetrics': {
+    'en-GB': altmetricsEnGB,
+    'el-GR': altmetricsElGR
+  },
+  'widget': {
+    'en-GB': widgetEnGB,
+    'el-GR': widgetElGR
   }
 };
 
@@ -125,7 +143,10 @@ export const paths = {
   'wikiversity': '/docs/wikiversity',
   'metrics-api': '/docs/metrics-api',
   'countries-api': '/docs/countries-api',
-  'tokens-api': '/docs/tokens-api'
+  'tokens-api': '/docs/tokens-api',
+  'annotation': '/docs/annotation',
+  'altmetrics': '/docs/altmetrics',
+  'widget': '/docs/widget'
 };
 
 /* eslint-disable dot-notation */
@@ -167,30 +188,58 @@ export const menu = [
   },
   {
     'name': <FormattedMessage
+      id="menu.drivers"
+      defaultMessage="Drivers"
+    />,
+    'path': '#'
+  },
+  {
+    'name': <FormattedMessage
       id="menu.googlebooks"
-      defaultMessage="Google Books Driver"
+      defaultMessage="- Google Books Driver"
     />,
     'path': paths['google-books']
   },
   {
     'name': <FormattedMessage
       id="menu.googleanalytics"
-      defaultMessage="Google Analytics Driver"
+      defaultMessage="- Google Analytics Driver"
     />,
     'path': paths['google-analytics']
   },
   {
     'name': <FormattedMessage
       id="menu.worldreader"
-      defaultMessage="World Reader Driver"
+      defaultMessage="- World Reader Driver"
     />,
     'path': paths['world-reader']
   },
   {
     'name': <FormattedMessage
       id="menu.openedition"
-      defaultMessage="Open Edition Driver"
+      defaultMessage="- Open Edition Driver"
     />,
     'path': paths['open-edition']
+  },
+  {
+    'name': <FormattedMessage
+      id="menu.annotation"
+      defaultMessage="Annotation"
+    />,
+    'path': paths['annotation']
+  },
+  {
+    'name': <FormattedMessage
+      id="menu.altmetrics"
+      defaultMessage="Altmetrics"
+    />,
+    'path': paths['altmetrics']
+  },
+  {
+    'name': <FormattedMessage
+      id="menu.widget"
+      defaultMessage="Metrics Widget"
+    />,
+    'path': paths['widget']
   }
 ];
