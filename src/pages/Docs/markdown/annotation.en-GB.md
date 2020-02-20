@@ -87,6 +87,6 @@ What happens next:
 
 The results are available on the HIRMEOS metrics, by source:
 ```
-https://metrics-api.operas-eu.org/api/altmetrics?uri=10.5334/dsj-2016-006&view=source&source=hypothesis
+https://metrics-api.operas-eu.org/events?filter=work_uri:info:doi:10.5334/bbc,measure_uri:https://metrics.operas-eu.org/hypothesis/annotations/v1
 ```
 
