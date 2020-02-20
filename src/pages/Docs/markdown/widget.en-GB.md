@@ -51,7 +51,7 @@ You will need to edit the values in `widget_params`.
 </script>
 
 <!-- load js for the Metrics Widget app-->
-<script src="https://storage.googleapis.com/operas/metrics-widget/hirmeos-metrics-0.1.1.min.js"></script>
+<script src="https://storage.googleapis.com/operas/metrics-widget/hirmeos-metrics-0.2.0.min.js"></script>
 ```
 
 ## Widget customisation

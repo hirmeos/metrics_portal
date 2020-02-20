@@ -1,4 +1,4 @@
-# Almetrics
+# Altmetrics
 
 ## Setting up your user account
 
