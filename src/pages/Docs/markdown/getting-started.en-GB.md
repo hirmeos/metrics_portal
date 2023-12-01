@@ -12,7 +12,7 @@ As part of Work Package 6 of the [HIRMEOS project][1] [Open Book Publishers][2] 
 ## Components
 The HIRMEOS metrics suite is made of:
 
-- [Metrics-drivers-wrapper][22]. Repository where all drivers, plugins and config are found.
+- [Metrics-drivers-wrapper]. Repository where all drivers, plugins and config are found.
 - [Identifier Translation Service][16]. Used to normalise identifiers.
 The Identifier Translation Service is a JSON REST API to a database of publication URIs. The translation service maps works (publications) to URIs (e.g. info:doi:10.11647/obp.0001, urn:isbn:9781906924010, https://www.openbookpublishers.com/product/3) to allow converting from one identifier to another.
 - Drivers. Used to collect and normalise data from reporting platforms.
@@ -27,7 +27,7 @@ The Identifier Translation Service is a JSON REST API to a database of publicati
 ## System architecture and diagram
 Please refer to the following link to view the diagram architecture:
 
-- [System diagram][23]
+- [System diagram]
 
 ## System requirements
 
@@ -54,8 +54,8 @@ You may find more information, including slides, [here][15].
 You may also get in touch with our technical team:
 - Usage metrics: [Javier Arias][20] (Open Book Publishers)
 - Altmetrics: [Rowan Hatherley][21] (Ubiquity Press)
-- Metrics Drivers: [Cristian Garcia][21] (Ubiquity Press)
-- Metrics Drivers: [Tai Jantarungsee][22] (Ubiquity Press)
+- Metrics Drivers: [Cristian Garcia][22] (Ubiquity Press)
+- Metrics Drivers: [Tai Jantarungsee][23] (Ubiquity Press)
 
 [1]: https://www.hirmeos.eu "HIRMEOS"
 [2]: https://www.openbookpublishers.com "Open Book Publishers"
@@ -65,7 +65,5 @@ You may also get in touch with our technical team:
 [19]: https://metrics.operas-eu.org/docs/tokens-api "Tokens API"
 [20]: mailto:javi@openbookpublishers.com "Javier Arias email address"
 [21]: mailto:rowan.hatherley@ubiquitypress.com "Rowan Hatherley email address"
-[22]: https://gitlab.com/ubiquitypress/metrics-drivers-wrapper "Metrics Drivers repository"
-[23]: https://drive.google.com/file/d/1VyCKBdm-Pt9x3pAM9YTlH3XJAQgE0Fn7/view?usp=sharing "System diagram"
-[24]: mailto:cristian.garcia@ubiquitypress.com "Cristian Garcia email address"
-[24]: mailto:tai.jantarungsee@ubiquitypress.com "Tai Jantarungsee email address"
+[22]: mailto:cristian.garcia@ubiquitypress.com "Cristian Garcia email address"
+[23]: mailto:tai.jantarungsee@ubiquitypress.com "Tai Jantarungsee email address"
