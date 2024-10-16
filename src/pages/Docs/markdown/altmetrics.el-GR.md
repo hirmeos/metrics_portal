@@ -1,2 +1,0 @@
-# Altmetrics
-Pending documentation

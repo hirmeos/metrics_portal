@@ -1,0 +1,98 @@
+site_name: Metrics Documentation
+site_url: "http://metrics.operas-eu.org/"
+
+extra_css:
+  - css/css.css
+  - https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css
+
+theme:
+  name: material
+  logo: /images/logo.png
+  favicon: /images/icons/Operas-icon.png
+
+  palette:
+    
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      accent: purple
+      # primary: custom
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: black
+      accent: purple
+      # primary: custom
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: white
+      accent: purple
+      # primary: custom
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+
+  features:
+    - content.code.annotate
+    - navigation.tabs
+    - navigation.top
+    - toc.integrate
+    - search.suggest
+    - search.highlight
+    - search.share
+    - navigation.tracking
+  color_mode:
+    default: light  # or "dark" or "auto"
+    toggle: true
+  toc:
+    depth: 3  # Display up to h3 headers      
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/hirmeos
+
+     
+copyright: "<h3><a href='https://operas-eu.org/'>OPERAS</a></h3>
+<p>Unless otherwise indicated, all materials created by the Hirmeos Project are licensed under a 
+<br><a href='https://creativecommons.org/licenses/by/4.0/'>Creative Commons Attribution 4.0 International License</a>. 
+Privacy policy - <a href='https://metrics.operas-eu.org/acceptable-use-policy'>Acceptable Use Policy and Conditions of Use</a></p>"
+
+nav:
+  - '<i class="fa-solid fa-chart-line"></i>&nbsp;&nbsp;Measures': measures.md
+  - '<i class="fa-sharp-duotone fa-solid fa-heart"></i>&nbsp;&nbsp;Our Principles': principles.md
+  - '<i class="fa-solid fa-book-open"></i>&nbsp;&nbsp;Documentation':
+      - Getting Started: metrics-docs/getting-started.en-GB.md
+      - Altmetrics: metrics-docs/altmetrics.en-GB.md
+      - Annotation: metrics-docs/annotation.en-GB.md
+      - Countries API: metrics-docs/countries-api.en-GB.md
+      - Crossref Cited-by: metrics-docs/crossref-citedby.en-GB.md      
+      - OPERAS Metrics Overview: metrics-docs/overview.en-GB.md
+      - Drivers: metrics-docs/drivers.en-GB.md      
+      - Onboarding Users: metrics-docs/onboarding-users.en-GB.md
+      - Onboarding Metrics: metrics-docs/onboarding-sending-metrics.en-GB.md 
+      - Drivers & Plugins:
+          - Access Logs: metrics-docs/access-logs-local.en-GB.md 
+          - Google Analytics: metrics-docs/google-analytics.en-GB.md
+          - Google Books: metrics-docs/google-books.en-GB.md
+          - Identifier Translation Service: metrics-docs/identifier-translation-service.en-GB.md
+          - IRUS-UK: metrics-docs/irus-uk.en-GB.md
+          - JSTOR: metrics-docs/jstor.en-GB.md
+          - Matomo: metrics-docs/matomo.en-GB.md
+          - Metrics API: metrics-docs/metrics-api.en-GB.md
+          - Onboarding Sending Metrics: metrics-docs/onboarding-sending-metrics.en-GB.md
+          - Onboarding Users: metrics-docs/onboarding-users.en-GB.md
+          - Server Access Logs: metrics-docs/server-access-logs.en-GB.md
+          - Tokens API: metrics-docs/tokens-api.en-GB.md
+          - Unglue.it: metrics-docs/unglueit.en-GB.md
+      - Widget: metrics-docs/widget.en-GB.md
+docs_dir: docs

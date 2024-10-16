@@ -1,0 +1,214 @@
+/* Zoom img */
+img {
+  transition: transform 0.2s;
+  /* Animation */
+}
+
+img:hover {
+  transform: scale(1.5);
+  /* Zoom effect */
+}
+
+/* Tiles */
+.tiles-container {
+  display: flex;
+  flex-wrap: wrap;
+  /* Allows wrapping to the next line if there are too many tiles */
+  gap: 16px;
+  /* Space between tiles */
+  margin-top: 20px;
+  padding: 20px;
+  justify-content: space-around;
+  /* Distribute tiles evenly */
+}
+
+.tile,
+.tile-1 {
+  margin: 10px;
+  flex: 1 1 calc(25% - 32px);
+  /* Adjust the width of the tiles (4 tiles per row) */
+  background-color: #f7f7f7;
+  border: 1px solid #e0e0e0;
+  padding: 50px !important;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tile-1 {
+  min-width: min-content;
+}
+
+.tile:hover,
+.tile-1:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(46, 45, 45, 0.15);
+}
+
+.tile h2,
+.tile-1 h2 {
+  margin-top: 0;
+  font-size: 1.5em;
+  color: #333;
+}
+
+.tile p,
+.tile-1 p {
+  color: #666;
+}
+
+/* For smaller screens, adjust the tile width */
+@media (max-width: 768px) {
+  .tile {
+    flex: 1 1 calc(50% - 32px);
+    /* 2 tiles per row on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .tile {
+    flex: 1 1 100%;
+    /* 1 tile per row on very small screens */
+  }
+}
+
+.initButtons {
+  position: relative;
+  max-width: fit-content;
+
+  display: block;
+  margin: 30px auto;
+  padding: 0;
+
+  overflow: hidden;
+
+  border-width: 0;
+  outline: none;
+  border-radius: 2px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+
+  background-color: #e6e6e6;
+  color: black !important;
+  cursor: pointer;
+  padding: 15px;
+
+  transition: background-color .3s;
+}
+
+.initButtons:hover,
+.initButtons:focus {
+  background-color: #64205d;
+  /* background-color: #4051b5; */
+  color: white !important;
+}
+
+.initButtons>* {
+  position: relative;
+}
+
+.initButtons span {
+  display: block;
+  padding: 12px 24px;
+}
+
+.initButtons:before {
+  content: "";
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  display: block;
+  width: 0;
+  padding-top: 0;
+
+  border-radius: 100%;
+
+  background-color: rgba(236, 240, 241, .3);
+
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.initButtons:active:before {
+  width: 120%;
+  padding-top: 120%;
+
+  transition: width .2s ease-out, padding-top .2s ease-out;
+}
+
+
+img:hover {
+  transform: none !important;
+}
+
+img {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.md-logo:hover {
+  transform: scale(1.1);
+  width: max-content !important;
+}
+
+.md-header__button {
+  transform: none !important;
+  transition: none !important;
+  transform: scale(1.1);
+  width: max-content !important;
+}
+
+.md-nav__item .md-nav__link--active,
+.md-nav__item .md-nav__link--active code {
+  color: #a04096;
+  font-weight: bold;
+}
+
+.md-nav--primary .md-nav__item--active>.md-nav__link {
+  color: #a04096;
+}
+
+.md-typeset a {
+  color: #a7499d;
+}
+
+.md-typeset a:focus,
+.md-typeset a:hover {
+  color: #f382e7;
+}
+
+.md-nav--lifted>.md-nav__list>.md-nav__item--active>.md-nav__link {
+  font-size: x-large;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%; /* Position the tooltip above the text */
+  left: 50%;
+  margin-left: -60px; /* Center the tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+  width: 300px;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
