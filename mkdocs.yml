@@ -79,7 +79,8 @@ nav:
       - OPERAS Metrics Overview: metrics-docs/overview.en-GB.md
       - Drivers: metrics-docs/drivers.en-GB.md      
       - Onboarding Users: metrics-docs/onboarding-users.en-GB.md
-      - Onboarding Metrics: metrics-docs/onboarding-sending-metrics.en-GB.md 
+      - Onboarding Metrics: metrics-docs/onboarding-sending-metrics.en-GB.md
+      - Metrics API: metrics-docs/metrics-api.en-GB.md
       - Drivers & Plugins:
           - Access Logs: metrics-docs/access-logs-local.en-GB.md 
           - Google Analytics: metrics-docs/google-analytics.en-GB.md
@@ -88,7 +89,6 @@ nav:
           - IRUS-UK: metrics-docs/irus-uk.en-GB.md
           - JSTOR: metrics-docs/jstor.en-GB.md
           - Matomo: metrics-docs/matomo.en-GB.md
-          - Metrics API: metrics-docs/metrics-api.en-GB.md
           - Onboarding Sending Metrics: metrics-docs/onboarding-sending-metrics.en-GB.md
           - Onboarding Users: metrics-docs/onboarding-users.en-GB.md
           - Server Access Logs: metrics-docs/server-access-logs.en-GB.md
