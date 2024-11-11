@@ -897,14 +897,68 @@
 <div id="value-display"></div>
 <p><strong>Description:</strong></p>
 <div class="tile-1" style="text-align:center; color:black">
-    No data available for the specified measure.
+  Total downloads, as determined by Google Analytics. To count multiple downloads of the same file by the same user, there must be a gap of at least 30 minutes from the last download, even if that previous download was not counted.
 </div>
+
+<p><strong>
+For Example:
+</strong></p>
+<div  style="text-align:center; color:black">
+<table>
+    <tr>
+        <th>Time of download</th>
+        <th>Minutes from last download</th>
+        <th>Downloads counted</th>
+    </tr>
+    <tr>
+        <td>3:00 pm</td>
+        <td>-</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>3:16 pm</td>
+        <td>16</td>
+        <td>0</td>
+    </tr>
+    <tr>
+        <td>3:33 pm</td>
+        <td>29</td>
+        <td>0</td>
+    </tr>
+    <tr>
+        <td>3:46 pm</td>
+        <td>13</td>
+        <td>0</td>
+    </tr>
+    <tr>
+        <td>4:02 pm</td>
+        <td>16</td>
+        <td>0</td>
+    </tr>
+    <tr>
+        <td>4:05 pm</td>
+        <td>3</td>
+        <td>0</td>
+    </tr>
+    <tr>
+        <td>4:39 pm</td>
+        <td>34</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td><strong>TOTAL DOWNLOADS COUNTED</strong></td>
+        <td></td>
+        <td><strong>2</strong></td>
+    </tr>
+</table>
+</div>
+
 <script>
 document.getElementById('value-display').innerHTML = `
   <h2><strong>up-ga/downloads/v1</strong></h2></br>
   <strong>Source <span class="tooltip"><i class="fa-solid fa-circle-info"></i> <span class="tooltiptext">Not all platforms use the same parameters to measure the same thing, so it is important to differentiate the platform we are collecting data from.</span></span> :</strong> Ubiquity Press </br>
-  <strong>Type <span class="tooltip"><i class="fa-solid fa-circle-info"></i> <span class="tooltiptext">Not all measures represent the same event, some platforms report the number of people who accessed a publication (e.g. users, session), others the number of times a resource was seen (e.g. views). For clarity, each of the measures described here will include its type.</span></span> :</strong> downloads</br>
-  <strong>Version <span class="tooltip"><i class="fa-solid fa-circle-info"></i> <span class="tooltiptext">Data providers and/or collectors may want to modify their definition of e.g. a view or a session. In order to ensure changes in these definitions are differentiated, we use versioning.</span></span> :</strong> 1
+  <strong>Type <span class="tooltip"><i class="fa-solid fa-circle-info"></i> <span class="tooltiptext">Not all measures represent the same event, some platforms report the number of people who accessed a publication (e.g. users, session), others the number of times a resource was seen (e.g. downloads). For clarity, each of the measures described here will include its type.</span></span> :</strong> downloads</br>
+  <strong>Version <span class="tooltip"><i class="fa-solid fa-circle-info"></i> <span class="tooltiptext">Data providers and/or collectors may want to modify their definition of e.g. a download or a session. In order to ensure changes in these definitions are differentiated, we use versioning.</span></span> :</strong> 1
 `;
 </script>
 

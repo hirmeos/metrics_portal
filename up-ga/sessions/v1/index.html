@@ -895,10 +895,65 @@
 
 <h1 id="up-ga-sessions-measure">Up-ga Sessions Measure</h1>
 <div id="value-display"></div>
-<p><strong>Description:</strong></p>
+<p><br>
+<strong>Description:</strong></p>
 <div class="tile-1" style="text-align:center; color:black">
-Total sessions for the landing page of a work, as determined by Google Analytics. A Session is a group of visits made by the same user within a continuous time frame, and ends after 30 minutes of inactivity; if a single user keeps interacting with the website within this time frame, multiple visits to the same work will be counted as one session.
+Total views of the landing page of a work, as determined by Google Analytics. To count multiple views of the same landing page by the same user, there must be a gap of at least 30 minutes from the last view of that landing page, even if that previous view was not counted.
 </div>
+
+<p><strong>
+For Example:
+</strong></p>
+<div  style="text-align:center; color:black">
+<table>
+    <tr>
+        <th>Time of visit</th>
+        <th>Minutes from last visit</th>
+        <th>Views counted</th>
+    </tr>
+    <tr>
+        <td>3:00 pm</td>
+        <td>-</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>3:16 pm</td>
+        <td>16</td>
+        <td>0</td>
+    </tr>
+    <tr>
+        <td>3:33 pm</td>
+        <td>29</td>
+        <td>0</td>
+    </tr>
+    <tr>
+        <td>3:46 pm</td>
+        <td>13</td>
+        <td>0</td>
+    </tr>
+    <tr>
+        <td>4:02 pm</td>
+        <td>16</td>
+        <td>0</td>
+    </tr>
+    <tr>
+        <td>4:05 pm</td>
+        <td>3</td>
+        <td>0</td>
+    </tr>
+    <tr>
+        <td>4:39 pm</td>
+        <td>34</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td><strong>TOTAL VIEWS COUNTED</strong></td>
+        <td></td>
+        <td><strong>2</strong></td>
+    </tr>
+</table>
+</div>
+
 <script>
 document.getElementById('value-display').innerHTML = `
   <h2><strong>up-ga/sessions/v1</strong></h2></br>
