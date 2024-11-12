@@ -2,307 +2,307 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>http://metrics.operas-eu.org/</loc>
-         <lastmod>2024-11-11</lastmod>
+         <lastmod>2024-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://metrics.operas-eu.org/measures/</loc>
-         <lastmod>2024-11-11</lastmod>
+         <lastmod>2024-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://metrics.operas-eu.org/policy/</loc>
-         <lastmod>2024-11-11</lastmod>
+         <lastmod>2024-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://metrics.operas-eu.org/principles/</loc>
-         <lastmod>2024-11-11</lastmod>
+         <lastmod>2024-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://metrics.operas-eu.org/classics-library/sessions/v1/</loc>
-         <lastmod>2024-11-11</lastmod>
+         <lastmod>2024-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://metrics.operas-eu.org/ekt/downloads/v1/</loc>
-         <lastmod>2024-11-11</lastmod>
+         <lastmod>2024-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://metrics.operas-eu.org/ekt/landingsessions/v1/</loc>
-         <lastmod>2024-11-11</lastmod>
+         <lastmod>2024-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://metrics.operas-eu.org/ekt/sessions/v1/</loc>
-         <lastmod>2024-11-11</lastmod>
+         <lastmod>2024-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://metrics.operas-eu.org/faculty/interaction/v1/</loc>
-         <lastmod>2024-11-11</lastmod>
+         <lastmod>2024-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://metrics.operas-eu.org/figshare/downloads/v1/</loc>
-         <lastmod>2024-11-11</lastmod>
+         <lastmod>2024-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://metrics.operas-eu.org/figshare/shares/v1/</loc>
-         <lastmod>2024-11-11</lastmod>
+         <lastmod>2024-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://metrics.operas-eu.org/figshare/views/v1/</loc>
-         <lastmod>2024-11-11</lastmod>
+         <lastmod>2024-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://metrics.operas-eu.org/google-books/views/v1/</loc>
-         <lastmod>2024-11-11</lastmod>
+         <lastmod>2024-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://metrics.operas-eu.org/google-play/downloads/v1/</loc>
-         <lastmod>2024-11-11</lastmod>
+         <lastmod>2024-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://metrics.operas-eu.org/google-play/views/v1/</loc>
-         <lastmod>2024-11-11</lastmod>
+         <lastmod>2024-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://metrics.operas-eu.org/hypothesis/annotations/v1/</loc>
-         <lastmod>2024-11-11</lastmod>
+         <lastmod>2024-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://metrics.operas-eu.org/irusuk/downloads/v1/</loc>
-         <lastmod>2024-11-11</lastmod>
+         <lastmod>2024-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://metrics.operas-eu.org/jstor/downloads/v1/</loc>
-         <lastmod>2024-11-11</lastmod>
+         <lastmod>2024-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://metrics.operas-eu.org/jstor/views/v1/</loc>
-         <lastmod>2024-11-11</lastmod>
+         <lastmod>2024-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://metrics.operas-eu.org/metrics-docs/access-logs-local.en-GB/</loc>
-         <lastmod>2024-11-11</lastmod>
+         <lastmod>2024-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://metrics.operas-eu.org/metrics-docs/altmetrics.en-GB/</loc>
-         <lastmod>2024-11-11</lastmod>
+         <lastmod>2024-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://metrics.operas-eu.org/metrics-docs/annotation.en-GB/</loc>
-         <lastmod>2024-11-11</lastmod>
+         <lastmod>2024-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://metrics.operas-eu.org/metrics-docs/countries-api.en-GB/</loc>
-         <lastmod>2024-11-11</lastmod>
+         <lastmod>2024-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://metrics.operas-eu.org/metrics-docs/crossref-citedby.en-GB/</loc>
-         <lastmod>2024-11-11</lastmod>
+         <lastmod>2024-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://metrics.operas-eu.org/metrics-docs/drivers.en-GB/</loc>
-         <lastmod>2024-11-11</lastmod>
+         <lastmod>2024-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://metrics.operas-eu.org/metrics-docs/getting-started.en-GB/</loc>
-         <lastmod>2024-11-11</lastmod>
+         <lastmod>2024-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://metrics.operas-eu.org/metrics-docs/google-analytics.en-GB/</loc>
-         <lastmod>2024-11-11</lastmod>
+         <lastmod>2024-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://metrics.operas-eu.org/metrics-docs/google-books.en-GB/</loc>
-         <lastmod>2024-11-11</lastmod>
+         <lastmod>2024-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://metrics.operas-eu.org/metrics-docs/identifier-translation-service.en-GB/</loc>
-         <lastmod>2024-11-11</lastmod>
+         <lastmod>2024-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://metrics.operas-eu.org/metrics-docs/irus-uk.en-GB/</loc>
-         <lastmod>2024-11-11</lastmod>
+         <lastmod>2024-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://metrics.operas-eu.org/metrics-docs/jstor.en-GB/</loc>
-         <lastmod>2024-11-11</lastmod>
+         <lastmod>2024-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://metrics.operas-eu.org/metrics-docs/matomo.en-GB/</loc>
-         <lastmod>2024-11-11</lastmod>
+         <lastmod>2024-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://metrics.operas-eu.org/metrics-docs/metrics-api.en-GB/</loc>
-         <lastmod>2024-11-11</lastmod>
+         <lastmod>2024-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://metrics.operas-eu.org/metrics-docs/onboarding-sending-metrics.en-GB/</loc>
-         <lastmod>2024-11-11</lastmod>
+         <lastmod>2024-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://metrics.operas-eu.org/metrics-docs/onboarding-users.en-GB/</loc>
-         <lastmod>2024-11-11</lastmod>
+         <lastmod>2024-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://metrics.operas-eu.org/metrics-docs/overview.en-GB/</loc>
-         <lastmod>2024-11-11</lastmod>
+         <lastmod>2024-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://metrics.operas-eu.org/metrics-docs/server-access-logs.en-GB/</loc>
-         <lastmod>2024-11-11</lastmod>
+         <lastmod>2024-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://metrics.operas-eu.org/metrics-docs/tokens-api.en-GB/</loc>
-         <lastmod>2024-11-11</lastmod>
+         <lastmod>2024-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://metrics.operas-eu.org/metrics-docs/unglueit.en-GB/</loc>
-         <lastmod>2024-11-11</lastmod>
+         <lastmod>2024-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://metrics.operas-eu.org/metrics-docs/widget.en-GB/</loc>
-         <lastmod>2024-11-11</lastmod>
+         <lastmod>2024-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://metrics.operas-eu.org/oapen/downloads/v1/</loc>
-         <lastmod>2024-11-11</lastmod>
+         <lastmod>2024-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://metrics.operas-eu.org/obp/downloads/v1/</loc>
-         <lastmod>2024-11-11</lastmod>
+         <lastmod>2024-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://metrics.operas-eu.org/obp-html/sessions/v1/</loc>
-         <lastmod>2024-11-11</lastmod>
+         <lastmod>2024-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://metrics.operas-eu.org/obp-pdf/sessions/v1/</loc>
-         <lastmod>2024-11-11</lastmod>
+         <lastmod>2024-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://metrics.operas-eu.org/open-edition/downloads/v1/</loc>
-         <lastmod>2024-11-11</lastmod>
+         <lastmod>2024-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://metrics.operas-eu.org/open-edition/views/v1/</loc>
-         <lastmod>2024-11-11</lastmod>
+         <lastmod>2024-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://metrics.operas-eu.org/openaire/downloads/v1/</loc>
-         <lastmod>2024-11-11</lastmod>
+         <lastmod>2024-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://metrics.operas-eu.org/other/downloads/v1/</loc>
-         <lastmod>2024-11-11</lastmod>
+         <lastmod>2024-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://metrics.operas-eu.org/other/views/v1/</loc>
-         <lastmod>2024-11-11</lastmod>
+         <lastmod>2024-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://metrics.operas-eu.org/sub-gottingen/downloads/v1/</loc>
-         <lastmod>2024-11-11</lastmod>
+         <lastmod>2024-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://metrics.operas-eu.org/unglueit/downloads/v1/</loc>
-         <lastmod>2024-11-11</lastmod>
+         <lastmod>2024-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://metrics.operas-eu.org/up-ga/downloads/v1/</loc>
-         <lastmod>2024-11-11</lastmod>
+         <lastmod>2024-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://metrics.operas-eu.org/up-ga/reads/v1/</loc>
-         <lastmod>2024-11-11</lastmod>
+         <lastmod>2024-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://metrics.operas-eu.org/up-ga/sessions/v1/</loc>
-         <lastmod>2024-11-11</lastmod>
+         <lastmod>2024-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://metrics.operas-eu.org/up-logs/downloads/v1/</loc>
-         <lastmod>2024-11-11</lastmod>
+         <lastmod>2024-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://metrics.operas-eu.org/up-logs/reads/v1/</loc>
-         <lastmod>2024-11-11</lastmod>
+         <lastmod>2024-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://metrics.operas-eu.org/up-logs/sessions/v1/</loc>
-         <lastmod>2024-11-11</lastmod>
+         <lastmod>2024-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://metrics.operas-eu.org/wikimedia/views/v1/</loc>
-         <lastmod>2024-11-11</lastmod>
+         <lastmod>2024-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://metrics.operas-eu.org/wikipedia/references/v1/</loc>
-         <lastmod>2024-11-11</lastmod>
+         <lastmod>2024-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://metrics.operas-eu.org/wordpress/references/v1/</loc>
-         <lastmod>2024-11-11</lastmod>
+         <lastmod>2024-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://metrics.operas-eu.org/world-reader/users/v1/</loc>
-         <lastmod>2024-11-11</lastmod>
+         <lastmod>2024-11-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
