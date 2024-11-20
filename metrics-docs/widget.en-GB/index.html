@@ -1355,7 +1355,7 @@
 <li>creates a <em>window</em> object called <code>operaswidget</code> which allows you to [un]subscribe to custom widget events, discussed in the <a href="#events">events section</a>.</li>
 </ul>
 <p>⚒️ The minified version of the script above is recommended to improve performance, but you can also use or modify the <a href="https://gitlab.com/ubiquitypress/metrics-widget/-/blob/master/dist/index.html#L205-232">unminified version</a>.</p>
-<p>ℹ️ In the example above, you will automatically receive the latest changes to the widget in the <code>v1</code> release. If you wish to change or understand this behaviour, see <a href="#versioning">Versioning</a>.</p>
+<p>🛈 In the example above, you will automatically receive the latest changes to the widget in the <code>v1</code> release. If you wish to change or understand this behaviour, see <a href="#versioning">Versioning</a>.</p>
 <p>Once you’ve added the <code>&lt;script&gt;</code> tag, you should see the following message in your browser console:</p>
 <blockquote>
 <p>Error loading widget: Could not find a script with ID <code>operas-metrics-config</code>.</p>
@@ -1371,7 +1371,7 @@
 <p>The widget has been designed with <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties">CSS Variables</a> in mind, meaning you should be able to easily override the primary colours (discussed in the <a href="#theming">theming section</a>).</p>
 <p>Although it is recommended to use the default CSS and modify any classes where required, the widget can fully operate without the default stylesheet and you are welcome to create your own styles instead.</p>
 <p>All classes within the widget are prefixed with <code>mw__</code> to avoid any style conflicts.</p>
-<p>ℹ️ Similar to the JavaScript code, you can also use either <code>latest</code> to always use the latest version of the widget’s CSS, or provide a specific version instead.</p>
+<p>🛈 Similar to the JavaScript code, you can also use either <code>latest</code> to always use the latest version of the widget’s CSS, or provide a specific version instead.</p>
 <h2 id="versioning">Versioning</h2>
 <h3 id="semantic-versioning">Semantic Versioning</h3>
 <p>The widget uses semantic versioning. For example, if a release was labelled <code>1.2.3-alpha.4</code>:</p>
@@ -1512,7 +1512,7 @@
 </tbody>
 </table>
 <p>For <code>cdn_scripts_url</code> and <code>cdn_images_url</code>, the <code>{version}</code> variable in the URL will be automatically replaced by the version of the widget you are running (as defined in the <a href="#getting-started">Getting Started</a> section). This isn’t needed, but recommended to prevent a mismatch between file versions.</p>
-<p>ℹ️ If you are using the auto-updating <code>-latest</code> version of the widget, the <code>{version}</code> will be replaced with the <em>actual</em> version number of the widget. So if the latest version is <code>1.0.0</code>, the variable will be replaced with <code>1.0.0</code>.</p>
+<p>🛈 If you are using the auto-updating <code>-latest</code> version of the widget, the <code>{version}</code> will be replaced with the <em>actual</em> version number of the widget. So if the latest version is <code>1.0.0</code>, the variable will be replaced with <code>1.0.0</code>.</p>
 <h3 id="options">Options</h3>
 <p>The options object allows you to configure the general behaviour widget.</p>
 <table>
