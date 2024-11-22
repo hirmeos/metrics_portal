@@ -898,7 +898,9 @@
 <p><br>
 <strong>Description:</strong></p>
 <div class="tile-1" style="text-align:center; color:black">
-Total views of the landing page of a work, as determined by Google Analytics. To count multiple views of the same landing page by the same user, there must be a gap of at least 30 minutes from the last view of that landing page, even if that previous view was not counted.
+Total views of the landing page of a work, as determined by Google Analytics. To count multiple views of the same page by the same user, there must be a period of at least 30 minutes of inactivity on the website, by the user.
+
+Note: The user's activity is logged in a session. The example below considers one type of interaction on a single page; however, a single session can contain interactions involving page views, downloads, and reads (even across different pages on the website). These interactions are logged within the same session if they occur before the session timeout. The user's session must end before another view of a specific page can be counted for that user (i.e. as part of an different session).
 </div>
 
 <p><strong>
@@ -945,7 +947,7 @@ For Example:
         <td>4:39 pm</td>
         <td>34</td>
         <td>1</td>
-    </tr>
+    </tr> 
     <tr>
         <td><strong>TOTAL VIEWS COUNTED</strong></td>
         <td></td>
