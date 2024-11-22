@@ -186,6 +186,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>http://metrics.operas-eu.org/metrics-docs/publishers/</loc>
+         <lastmod>2024-11-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>http://metrics.operas-eu.org/metrics-docs/server-access-logs.en-GB/</loc>
          <lastmod>2024-11-22</lastmod>
          <changefreq>daily</changefreq>
