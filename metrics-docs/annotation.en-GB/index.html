@@ -1085,7 +1085,14 @@
   page, including within the EPUB content. The code for this working implementation can be found in
   <a href="https://github.com/futurepress/hypothesis-reader">this git repository</a>.</p>
 <h2 id="pdf">PDF</h2>
-<p>TBC</p>
+<p>To enable annotations on a PDF document embedded in your website using Hypothesis, you will need to include the Hypothesis CDN in your HTML. Below is a simple implementation:</p>
+<pre><code>&lt;script src=&quot;https://hypothesis.is/embed.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+<p>You can embed the PDF using an iframe as follows:</p>
+<pre><code>&lt;iframe src=&quot;https://hyp.is/your-pdf-url.pdf&quot; width=&quot;600&quot; height=&quot;800&quot;&gt;&lt;/iframe&gt;
+</code></pre>
+<p>Make sure to replace 'your-pdf-url.pdf' with the actual URL of your PDF document.</p>
+<p>A more extended sample could be found in <a href="https://github.com/hypothesis/pdf.js-hypothes.is">this git repository</a>.</p>
 <h2 id="embed-dublin-core">Embed Dublin Core</h2>
 <p>It is clear that in order to make easier to calculate metrics around published content, we need to associate the annotations with a unique identifier for the published content, most often the DOI.</p>
 <p>The CrossRef Event Data service scans known websites in order to retrieve URLs for the content and associate them with DOIs. To make this happen, the content page should contain Dublin Core Meta tags.</p>
