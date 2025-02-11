@@ -101,87 +101,87 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>http://metrics.operas-eu.org/metrics-docs/access-logs-local.en-GB/</loc>
+         <loc>http://metrics.operas-eu.org/metrics-docs/access-logs-local/</loc>
          <lastmod>2025-02-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>http://metrics.operas-eu.org/metrics-docs/altmetrics.en-GB/</loc>
+         <loc>http://metrics.operas-eu.org/metrics-docs/altmetrics/</loc>
          <lastmod>2025-02-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>http://metrics.operas-eu.org/metrics-docs/annotation.en-GB/</loc>
+         <loc>http://metrics.operas-eu.org/metrics-docs/annotation/</loc>
          <lastmod>2025-02-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>http://metrics.operas-eu.org/metrics-docs/countries-api.en-GB/</loc>
+         <loc>http://metrics.operas-eu.org/metrics-docs/countries-api/</loc>
          <lastmod>2025-02-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>http://metrics.operas-eu.org/metrics-docs/crossref-citedby.en-GB/</loc>
+         <loc>http://metrics.operas-eu.org/metrics-docs/crossref-citedby/</loc>
          <lastmod>2025-02-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>http://metrics.operas-eu.org/metrics-docs/drivers.en-GB/</loc>
+         <loc>http://metrics.operas-eu.org/metrics-docs/drivers/</loc>
          <lastmod>2025-02-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>http://metrics.operas-eu.org/metrics-docs/getting-started.en-GB/</loc>
+         <loc>http://metrics.operas-eu.org/metrics-docs/getting-started/</loc>
          <lastmod>2025-02-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>http://metrics.operas-eu.org/metrics-docs/google-analytics.en-GB/</loc>
+         <loc>http://metrics.operas-eu.org/metrics-docs/google-analytics/</loc>
          <lastmod>2025-02-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>http://metrics.operas-eu.org/metrics-docs/google-books.en-GB/</loc>
+         <loc>http://metrics.operas-eu.org/metrics-docs/google-books/</loc>
          <lastmod>2025-02-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>http://metrics.operas-eu.org/metrics-docs/identifier-translation-service.en-GB/</loc>
+         <loc>http://metrics.operas-eu.org/metrics-docs/identifier-translation-service/</loc>
          <lastmod>2025-02-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>http://metrics.operas-eu.org/metrics-docs/irus-uk.en-GB/</loc>
+         <loc>http://metrics.operas-eu.org/metrics-docs/irus-uk/</loc>
          <lastmod>2025-02-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>http://metrics.operas-eu.org/metrics-docs/jstor.en-GB/</loc>
+         <loc>http://metrics.operas-eu.org/metrics-docs/jstor/</loc>
          <lastmod>2025-02-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>http://metrics.operas-eu.org/metrics-docs/matomo.en-GB/</loc>
+         <loc>http://metrics.operas-eu.org/metrics-docs/matomo/</loc>
          <lastmod>2025-02-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>http://metrics.operas-eu.org/metrics-docs/metrics-api.en-GB/</loc>
+         <loc>http://metrics.operas-eu.org/metrics-docs/metrics-api/</loc>
          <lastmod>2025-02-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>http://metrics.operas-eu.org/metrics-docs/onboarding-sending-metrics.en-GB/</loc>
+         <loc>http://metrics.operas-eu.org/metrics-docs/onboarding-sending-metrics/</loc>
          <lastmod>2025-02-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>http://metrics.operas-eu.org/metrics-docs/onboarding-users.en-GB/</loc>
+         <loc>http://metrics.operas-eu.org/metrics-docs/onboarding-users/</loc>
          <lastmod>2025-02-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>http://metrics.operas-eu.org/metrics-docs/overview.en-GB/</loc>
+         <loc>http://metrics.operas-eu.org/metrics-docs/overview/</loc>
          <lastmod>2025-02-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -191,22 +191,22 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>http://metrics.operas-eu.org/metrics-docs/server-access-logs.en-GB/</loc>
+         <loc>http://metrics.operas-eu.org/metrics-docs/server-access-logs/</loc>
          <lastmod>2025-02-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>http://metrics.operas-eu.org/metrics-docs/tokens-api.en-GB/</loc>
+         <loc>http://metrics.operas-eu.org/metrics-docs/tokens-api/</loc>
          <lastmod>2025-02-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>http://metrics.operas-eu.org/metrics-docs/unglueit.en-GB/</loc>
+         <loc>http://metrics.operas-eu.org/metrics-docs/unglueit/</loc>
          <lastmod>2025-02-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>http://metrics.operas-eu.org/metrics-docs/widget.en-GB/</loc>
+         <loc>http://metrics.operas-eu.org/metrics-docs/widget/</loc>
          <lastmod>2025-02-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
