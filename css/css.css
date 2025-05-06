@@ -4,6 +4,20 @@ img {
   /* Animation */
 }
 
+.loader {
+    padding: 10px;
+    color: #666;
+    font-style: italic;
+}
+
+.error-message {
+    color: #d32f2f;
+    background: #ffebee;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+    display: none;
+}
 img:hover {
   transform: scale(1.5);
   /* Zoom effect */
