@@ -683,6 +683,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#example-of-plugin-configuration-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example of plugin configuration file:
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -934,6 +943,28 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../figshare/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Figshare
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1065,8 +1096,30 @@ a URL within the last <code>session_timeout</code> (e.g. half-hour)</p>
 </tr>
 </tbody>
 </table>
-<p>Example configuration file:</p>
-<p>Please refer to the metrics drivers wrapper for an example configuration file.</p>
+<h3 id="example-of-plugin-configuration-file">Example of plugin configuration file:</h3>
+<pre><code class="language-yaml">measure_regexes: [
+  {
+    name: &quot;downloads&quot;,
+    measure: 'https://test-metrics.com/access-logs-test/downloads/v1',
+    regex: ['https:\/\/cjs\.sljol\.info/articles/10.\d{4,9}/[ -._;(/:A-Za-z0-9 ]+/galley/\d+/download/?', ],
+  },
+  {
+    name: &quot;sessions&quot;,
+    measure: 'https://metrics.com/access-logs-test/sessions/v1',
+    regex: ['https:\/\/cjs\.sljol\.info/articles/10.\d{4,9}/[ -._;(/:A-Za-z0-9 ]+/?', ],
+  }
+]
+excluded_ips: [&quot;8.8.8.8&quot;, &quot;9.9.9.9&quot;]
+excluded_urls: [&quot;https://malformed_url.com&quot;]
+logdir: &quot;plugins/access_logs_local/logs&quot;
+url_prefix: 'https://cjs.sljol.info'
+session_timeout: 1800
+rollover: false
+cutoff_days: 3
+start_date: '2023-06-01'
+uri_scheme: &quot;info:doi&quot;
+active: false   # set to true for local testing...
+</code></pre>
 
 
 

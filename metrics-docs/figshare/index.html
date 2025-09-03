@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="http://metrics.operas-eu.org/metrics-docs/google-books/">
+        <link rel="canonical" href="http://metrics.operas-eu.org/metrics-docs/figshare/">
       
       
-        <link rel="prev" href="../google-analytics/">
+        <link rel="prev" href="../unglueit/">
       
       
-        <link rel="next" href="../identifier-translation-service/">
+        <link rel="next" href="../widget/">
       
       
       <link rel="icon" href="/images/icons/Operas-icon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Google Books - Metrics Documentation</title>
+        <title>Figshare - Metrics Documentation</title>
       
     
     
@@ -85,7 +85,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#google-books-driver" class="md-skip">
+        <a href="#figshare-driver" class="md-skip">
           Skip to content
         </a>
       
@@ -122,7 +122,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Google Books
+              Figshare
             
           </span>
         </div>
@@ -668,31 +668,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Google Books
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../google-books/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -702,44 +681,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#plugin-variables-description" class="md-nav__link">
-    <span class="md-ellipsis">
-      Plugin Variables Description
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-of-plugin-configuration-file" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example of plugin configuration file:
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -947,10 +888,31 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../figshare/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Figshare
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -960,6 +922,44 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#plugin-variables-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plugin Variables Description
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-of-plugin-configuration-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example of plugin configuration file:
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1040,10 +1040,9 @@
 
 
 
-<h1 id="google-books-driver">Google Books Driver</h1>
-<p>Install the driver as a package from PyPI by visiting the following link on <a href="https://pypi.org/project/hirmeos-google-books/" title="Pypi link">pypi</a>. </p>
-<p>This driver loads csv reports from google books. It can either download a CSV report from google books and return a string of its content.</p>
-<p>The first option is web scraping using Selenium. You need a google account which has to be a dedicated account that only has access to google play books, and a second google account as recovery is needed. And 2FA also needs to be disabled to make sure the web scraping is successful. We recommended you double check the output, since there have been issues with the google API, when running the driver.</p>
+<h1 id="figshare-driver">Figshare Driver</h1>
+<p>Install the driver as a package from PyPI by visiting the following link on <a href="https://pypi.org/project/figshare-driver/" title="Pypi link">pypi</a>.</p>
+<p>The driver performs API calls to the Figshare endpoint https://stats.figshare.com/tome/breakdown/ and executes the needed filters and data normalization to be able to saved such data in the OPERAS database.</p>
 <h3 id="plugin-variables-description">Plugin Variables Description</h3>
 <table>
 <thead>
@@ -1059,37 +1058,37 @@
 </tr>
 <tr>
 <td><code>start_date</code></td>
-<td>the date that you want to first pull results the first time the plugin runs, a string.</td>
+<td>the date that you want to first pull results the first time the plugin runs, string.</td>
 </tr>
 <tr>
-<td><code>uri_scheme</code></td>
-<td>Uri scheme to save results against, string.</td>
-</tr>
-<tr>
-<td><code>gb_account</code></td>
-<td>Google books account id. Numeric representation of the account, used to download the google books files, string.</td>
-</tr>
-<tr>
-<td><code>user_agent</code></td>
-<td>Used by selenium to initialise the configuration, string.</td>
+<td><code>logdir</code></td>
+<td>Directory where the driver will read the .txt file containing the metrics ids to pull from the API, string.</td>
 </tr>
 <tr>
 <td><code>username</code></td>
-<td>username for the google books account, string.</td>
+<td>username for the Figshare account, string.</td>
 </tr>
 <tr>
 <td><code>password</code></td>
-<td>password for the google books account, string.</td>
+<td>password for the Figshare account, string.</td>
+</tr>
+<tr>
+<td><code>ids_file</code></td>
+<td>Name of the txt file containing the ids to query against, string.</td>
+</tr>
+<tr>
+<td><code>base_url</code></td>
+<td>Figshare endpoint to perform the API calls, string.</td>
 </tr>
 </tbody>
 </table>
 <h3 id="example-of-plugin-configuration-file">Example of plugin configuration file:</h3>
-<pre><code class="language-yaml">Gb_account - &quot;123456789&quot;
-User_agent - &quot;Mozilla/5.0 (Windows NT 6.1; WOW64; rv:2 Firefox/25.0&quot;
-username: &quot;&quot;
-password: &quot;&quot;
-uri_scheme: &quot;info:doi&quot;
-start_date: &quot;2023-01-01&quot;
+<pre><code class="language-yaml">base_url: &quot;https://stats.figshare.com/tome/breakdown/&quot;
+username: &quot;some_username_stats&quot;
+password: &quot;****&quot;
+logdir: &quot;plugins/figshare/uploads&quot;
+start_date: &quot;2011-07-01&quot;
+ids_file: &quot;article_ids.txt&quot;
 active: false
 </code></pre>
 

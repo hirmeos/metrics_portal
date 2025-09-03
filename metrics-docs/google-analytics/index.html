@@ -705,6 +705,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#example-of-plugin-configuration-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example of plugin configuration file:
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -934,6 +943,28 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../figshare/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Figshare
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1064,8 +1095,47 @@
 </tr>
 </tbody>
 </table>
-<p>Example configuration file:</p>
-<p>Please refer to the metrics drivers wrapper for an example configuration file.</p>
+<h3 id="example-of-plugin-configuration-file">Example of plugin configuration file:</h3>
+<pre><code class="language-yaml">events:
+  dimensions:
+  - ga:test
+  - ga:test
+  - ga:test
+  - ga:test
+  headers:
+    identifier_name: ga:test
+  identifier_type: https
+  measures:
+    downloads:
+      categories:
+      - pdf download
+      - epub download
+      - mobi download
+      measure: https://metrics.test.org/test/downloads/v1
+    reads:
+      categories:
+      - epub view
+      measure: https://metrics.test-eu.org/test/reads/v1
+  metrics:
+  - ga:test
+filters:
+- /test/books
+- /test/chapters
+json_key:
+  auth_provider_x509_cert_url: https://www.test.com/oauth2/v1/certs
+  auth_uri: https://test.com/o/oauth2/auth
+  client_email: test@test.com
+  client_id: '999999999999999999999'
+  client_x509_cert_url: https://www.test.com
+  private_key: 'test private key'
+  private_key_id: 99999999999999999999999999999999999999999
+  project_id: test-99999
+  token_uri: https://test.com/token
+  type: test
+prefix: https://www.test.com
+regex:
+- https:\/\/(www\.)?test\.com\/site\/(books|chapters)\/([em]\/)?10\.?\d{3,9}(/[-._;():A-Za-z0-9]+)+
+</code></pre>
 
 
 
