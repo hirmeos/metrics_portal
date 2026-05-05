@@ -44,11 +44,11 @@
 | [UPLO Sessions](uplo/sessions/v1.md) | https://metrics.operas-eu.org      | uplo/sessions/v1      | UPLO                    | sessions   | 1       |
 | [UPLO Reads](uplo/reads/v1.md) | https://metrics.operas-eu.org     | uplo/reads/v1        | UPLO                     | reads   | 1       |
 | [UPLO downloads](uplo/downloads/v1.md) | https://metrics.operas-eu.org     | uplo/downloads/v1     | UPLO                     | downloads  | 1       |
-| [Reference Global Sessions](reference-global/sessions/v1.md) | https://metrics.operas-eu.org     | rg/sessions/v1     | Reference Global                     | sessions  | 1       |
-| [Reference Global Reads](reference-global/reads/v1.md) | https://metrics.operas-eu.org     | rg/reads/v1     | Reference Global                     | reads  | 1       |
-| [Reference Global Downloads](reference-global/downloads/v1.md) | https://metrics.operas-eu.org     | rg/downloads/v1     | Reference Global                     | downloads  | 1       |
-| [Reference Global Historical Reads](rg-historical/reads/v1.md) | https://metrics.operas-eu.org     | rg-historical/reads/v1     | Reference Global                     | reads  | 1       |
-| [Reference Global Historical Downloads](rg-historical/downloads/v1.md) | https://metrics.operas-eu.org     | rg-historical/downloads/v1     | Reference Global                     | downloads  | 1       |
+| [Reference Global Sessions](rg/sessions/v1.md) | https://metrics.operas-eu.org     | rg/sessions/v1     | Reference Global                     | sessions  | 1       |
+| [Reference Global Reads](rg/reads/v1.md) | https://metrics.operas-eu.org     | rg/reads/v1     | Reference Global                     | reads  | 1       |
+| [Reference Global Downloads](rg/downloads/v1.md) | https://metrics.operas-eu.org     | rg/downloads/v1     | Reference Global                     | downloads  | 1       |
+| [Reference Global Historical Reads](rg/historical-reads/v1.md) | https://metrics.operas-eu.org     | rg/historical-reads/v1     | Reference Global                     | reads  | 1       |
+| [Reference Global Historical Downloads](rg/historical-downloads/v1.md) | https://metrics.operas-eu.org     | rg/historical-downloads/v1     | Reference Global                     | downloads  | 1       |
 | [Crossref citations](crossref/citations/v1.md) | https://metrics.operas-eu.org     | crossref/citations/v1     | Crossref                     | citations  | 1       |
 | [Historic](historical/downloads/v1.md) | https://metrics.operas-eu.org     | historical/downloads/v1     | Historic                     | downloads  | 1       |
 | [Twitter](twitter/tweets/v1.md)   | https://metrics.operas-eu.org        | twitter/tweets/v1   | Twitter                       | tweets      | 1       |
