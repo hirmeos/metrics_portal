@@ -980,6 +980,28 @@
   
   
     <li class="md-nav__item">
+      <a href="../bot-detection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bot Detection & Reports
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../widget/" class="md-nav__link">
         
   
@@ -1096,46 +1118,46 @@
 </tbody>
 </table>
 <h3 id="example-of-plugin-configuration-file">Example of plugin configuration file:</h3>
-<pre><code class="language-yaml">events:
-  dimensions:
-  - ga:test
-  - ga:test
-  - ga:test
-  - ga:test
-  headers:
-    identifier_name: ga:test
-  identifier_type: https
-  measures:
-    downloads:
-      categories:
-      - pdf download
-      - epub download
-      - mobi download
-      measure: https://metrics.test.org/test/downloads/v1
-    reads:
-      categories:
-      - epub view
-      measure: https://metrics.test-eu.org/test/reads/v1
-  metrics:
-  - ga:test
-filters:
-- /test/books
-- /test/chapters
-json_key:
-  auth_provider_x509_cert_url: https://www.test.com/oauth2/v1/certs
-  auth_uri: https://test.com/o/oauth2/auth
-  client_email: test@test.com
-  client_id: '999999999999999999999'
-  client_x509_cert_url: https://www.test.com
-  private_key: 'test private key'
-  private_key_id: 99999999999999999999999999999999999999999
-  project_id: test-99999
-  token_uri: https://test.com/token
-  type: test
-prefix: https://www.test.com
-regex:
-- https:\/\/(www\.)?test\.com\/site\/(books|chapters)\/([em]\/)?10\.?\d{3,9}(/[-._;():A-Za-z0-9]+)+
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nt">events</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">dimensions</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ga:test</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ga:test</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ga:test</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ga:test</span>
+<span class="w">  </span><span class="nt">headers</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">identifier_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ga:test</span>
+<span class="w">  </span><span class="nt">identifier_type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https</span>
+<span class="w">  </span><span class="nt">measures</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">downloads</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">categories</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pdf download</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">epub download</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mobi download</span>
+<span class="w">      </span><span class="nt">measure</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://metrics.test.org/test/downloads/v1</span>
+<span class="w">    </span><span class="nt">reads</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">categories</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">epub view</span>
+<span class="w">      </span><span class="nt">measure</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://metrics.test-eu.org/test/reads/v1</span>
+<span class="w">  </span><span class="nt">metrics</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ga:test</span>
+<span class="nt">filters</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/test/books</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/test/chapters</span>
+<span class="nt">json_key</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">auth_provider_x509_cert_url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.test.com/oauth2/v1/certs</span>
+<span class="w">  </span><span class="nt">auth_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://test.com/o/oauth2/auth</span>
+<span class="w">  </span><span class="nt">client_email</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">test@test.com</span>
+<span class="w">  </span><span class="nt">client_id</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;999999999999999999999&#39;</span>
+<span class="w">  </span><span class="nt">client_x509_cert_url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.test.com</span>
+<span class="w">  </span><span class="nt">private_key</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;test</span><span class="nv"> </span><span class="s">private</span><span class="nv"> </span><span class="s">key&#39;</span>
+<span class="w">  </span><span class="nt">private_key_id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">99999999999999999999999999999999999999999</span>
+<span class="w">  </span><span class="nt">project_id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">test-99999</span>
+<span class="w">  </span><span class="nt">token_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://test.com/token</span>
+<span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">test</span>
+<span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.test.com</span>
+<span class="nt">regex</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https:\/\/(www\.)?test\.com\/site\/(books|chapters)\/([em]\/)?10\.?\d{3,9}(/[-._;():A-Za-z0-9]+)+</span>
+</code></pre></div>
 
 
 

@@ -1040,6 +1040,28 @@
   
   
     <li class="md-nav__item">
+      <a href="../bot-detection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bot Detection & Reports
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../widget/" class="md-nav__link">
         
   
@@ -1160,7 +1182,7 @@
 </table>
 <h3 id="running-with-docker-compose">Running with docker-compose</h3>
 <p>The easiest way to get a fully featured and functional setup is using a docker-compose file, since the API depends on the <a href="https://github.com/hirmeos/tokens_db" title="Tokens Database">hirmeos/tokens_db</a> database.</p>
-<pre><code>version: &quot;3.5&quot;
+<p><div class="highlight"><pre><span></span><code>version: &quot;3.5&quot;
 
 services:
   tokens_db:
@@ -1188,8 +1210,8 @@ services:
 
 volumes:
   db:
-</code></pre>
-<p>Notes:
+</code></pre></div>
+Notes:
 - The example uses the docker images already built and used by Open Book Publishers. You may use the provded docker files to build your own, instead.
 - You may of course use whatever port you like, and/or use a proxy server (e.g. nginx) to handle the API endpoint.
 - The <code>db</code> volume ensure the contents of the database persist when restarting/deleting the container.
@@ -1197,12 +1219,12 @@ volumes:
 <h3 id="create-the-first-user-account">Create the first user account</h3>
 <p>Account registration is only allowed via HTTP (<code>POST /accounts</code>) after at least one account has been registered via CLI, i.e. HTTP registration requires a token, which are only issued to accounts.</p>
 <p>The easiest way is to run python on the api container:</p>
-<pre><code>docker exec -it tokens_api python
-</code></pre>
-<p>Then call the <code>create_account()</code> method in <code>AccountController()</code>:</p>
-<pre><code>from api import *
+<div class="highlight"><pre><span></span><code>docker exec -it tokens_api python
+</code></pre></div>
+<p>Then call the <code>create_account()</code> method in <code>AccountController()</code>:
+<div class="highlight"><pre><span></span><code>from api import *
 accountctrl.AccountController.create_account(&quot;email@obp.com&quot;, &quot;secure_password&quot;, &quot;acct:user@domain&quot;, &quot;Name&quot;, &quot;Surname&quot;, &quot;admin&quot;)
-</code></pre>
+</code></pre></div></p>
 <h3 id="api-routes">API routes</h3>
 <p>The following methods are allowed:</p>
 <table>

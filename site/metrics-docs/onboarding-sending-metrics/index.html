@@ -1021,6 +1021,28 @@
   
   
     <li class="md-nav__item">
+      <a href="../bot-detection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bot Detection & Reports
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../widget/" class="md-nav__link">
         
   
@@ -1116,23 +1138,25 @@ Method: GET</li>
 </ul>
 <p>Your request will need to be authenticated using basic authentication. This will use your login details as username:password, where username is the email you registered with and password is your password.
 Example: Assuming a user registers with the following credentials:</p>
-<pre><code class="language-bash">    email: test.user@gmail.com
-    password: test-password-123
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="w">    </span>email:<span class="w"> </span>test.user@gmail.com
+<span class="w">    </span>password:<span class="w"> </span>test-password-123
+</code></pre></div>
 <ul>
-<li>With curl, this can be done as either:</li>
+<li>
+<p>With curl, this can be done as either:
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>curl<span class="w"> </span>-u<span class="w"> </span>test.user@gmail.com:test-password-123
+</code></pre></div></p>
+</li>
+<li>
+<p>Or using the base64 encoding of username-password:
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>curl<span class="w"> </span>--header<span class="w"> </span><span class="s2">&quot;Authorization: Basic dGVzdC51c2VyQGdtYWlsLmNvbTp0ZXN0LXBhc3N3b3JkLTEyMw==&quot;</span>
+</code></pre></div></p>
+</li>
 </ul>
-<pre><code class="language-bash">$ curl -u test.user@gmail.com:test-password-123
-</code></pre>
-<ul>
-<li>Or using the base64 encoding of username-password:</li>
-</ul>
-<pre><code class="language-bash">$ curl --header &quot;Authorization: Basic dGVzdC51c2VyQGdtYWlsLmNvbTp0ZXN0LXBhc3N3b3JkLTEyMw==&quot;
-</code></pre>
 <h2 id="token-bearer-schema">Token Bearer schema</h2>
 <p>Once you have a token, all requests to the Altmetrics API will require you to use this token to authenticate yourself. To do this, simply add the token to your request header, as follows.</p>
-<pre><code class="language-bash">Authorization: Bearer [token]
-</code></pre>
+<div class="highlight"><pre><span></span><code>Authorization:<span class="w"> </span>Bearer<span class="w"> </span><span class="o">[</span>token<span class="o">]</span>
+</code></pre></div>
 <p>Where <code>[token]</code> represents your JWT.</p>
 <h2 id="where-to-go-from-here">Where to go from here</h2>
 <p>If your organisation just wants to get authenticated into the Metrics API in order to send metrics, you can skip the following sub-sections and jump forward to the Metrics API docs.
@@ -1146,18 +1170,18 @@ API endpoint: https://altmetrics.operas-eu.org/api/uriset
 Method: POST
 JSON format: The Altmetrics API expects to receive JSON, containing a list of DOIs in the format shown below. Each DOI can be registered with zero or more URLs.</li>
 </ul>
-<pre><code class="language-bash">[
-    {
-        &quot;doi&quot;: DOI
-        &quot;url&quot;: [
-            URL1,
-            URL2,
-            URL3,
-        ]
-    }
-]
-</code></pre>
-<p>Refer to postman JSON for an example call to this API endpoint.</p>
+<p><div class="highlight"><pre><span></span><code><span class="o">[</span>
+<span class="w">    </span><span class="o">{</span>
+<span class="w">        </span><span class="s2">&quot;doi&quot;</span>:<span class="w"> </span>DOI
+<span class="w">        </span><span class="s2">&quot;url&quot;</span>:<span class="w"> </span><span class="o">[</span>
+<span class="w">            </span>URL1,
+<span class="w">            </span>URL2,
+<span class="w">            </span>URL3,
+<span class="w">        </span><span class="o">]</span>
+<span class="w">    </span><span class="o">}</span>
+<span class="o">]</span>
+</code></pre></div>
+Refer to postman JSON for an example call to this API endpoint.</p>
 <h2 id="querying-dois">Querying DOIs</h2>
 <p>Check all DOIs associated with your user account. Remember to authenticate yourself with your JWT.
 API endpoint: https://altmetrics.operas-eu.org/api/uriset
@@ -1180,35 +1204,37 @@ Each unique metrics event is sent individually to the Metrics API. Multiple even
 </ul>
 <p>Endpoint: <a href="https://metrics-api.operas-eu.org/events" title="Events">Events</a> </p>
 <ul>
-<li>Example: Generic structure of the API POST</li>
+<li>
+<p>Example: Generic structure of the API POST
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>--header<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--header<span class="w"> </span><span class="s2">&quot;Authorization: Bearer &lt;JWT TOKEN&gt;&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--request<span class="w"> </span>POST<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--data<span class="w"> </span><span class="s1">&#39;&lt;METRICS EVENT JSON DATA&gt;&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>https://metrics-api.operas-eu.org/events
+</code></pre></div></p>
+</li>
+<li>
+<p>Metrics event JSON data examples:</p>
+</li>
 </ul>
-<pre><code class="language-bash">curl --header &quot;Content-Type: application/json&quot; \
-  --header &quot;Authorization: Bearer &lt;JWT TOKEN&gt;&quot; \
-  --request POST \
-  --data '&lt;METRICS EVENT JSON DATA&gt;' \
-  https://metrics-api.operas-eu.org/events
-</code></pre>
-<ul>
-<li>Metrics event JSON data examples:</li>
-</ul>
-<pre><code class="language-bash">{
-  &quot;work_uri&quot;: &quot;info:doi:10.5334/bbc&quot;,
-  &quot;measure_uri&quot;: &quot;https://metrics.operas-eu.org/oapen/downloads/v1&quot;,
-  &quot;timestamp&quot;: &quot;2017-04-01T00:00:00+0000&quot;,
-  &quot;event_uri&quot;: null,
-  &quot;country_uri&quot;: &quot;urn:iso:std:3166:-2:BR&quot;,
-  &quot;value&quot;: 2,
-}
+<div class="highlight"><pre><span></span><code><span class="o">{</span>
+<span class="w">  </span><span class="s2">&quot;work_uri&quot;</span>:<span class="w"> </span><span class="s2">&quot;info:doi:10.5334/bbc&quot;</span>,
+<span class="w">  </span><span class="s2">&quot;measure_uri&quot;</span>:<span class="w"> </span><span class="s2">&quot;https://metrics.operas-eu.org/oapen/downloads/v1&quot;</span>,
+<span class="w">  </span><span class="s2">&quot;timestamp&quot;</span>:<span class="w"> </span><span class="s2">&quot;2017-04-01T00:00:00+0000&quot;</span>,
+<span class="w">  </span><span class="s2">&quot;event_uri&quot;</span>:<span class="w"> </span>null,
+<span class="w">  </span><span class="s2">&quot;country_uri&quot;</span>:<span class="w"> </span><span class="s2">&quot;urn:iso:std:3166:-2:BR&quot;</span>,
+<span class="w">  </span><span class="s2">&quot;value&quot;</span>:<span class="w"> </span><span class="m">2</span>,
+<span class="o">}</span>
 
-{
-  &quot;work_uri&quot;: &quot;info:doi:10.5334/bbc&quot;,
-  &quot;measure_uri&quot;: &quot;https://metrics.operas-eu.org//up-logs/downloads/v1&quot;,
-  &quot;timestamp&quot;: &quot;2022-06-01T00:00:00+0000&quot;,
-  &quot;event_uri&quot;: null,
-  &quot;country_uri&quot;: null,
-  &quot;value&quot;: 5,
-}
-</code></pre>
+<span class="o">{</span>
+<span class="w">  </span><span class="s2">&quot;work_uri&quot;</span>:<span class="w"> </span><span class="s2">&quot;info:doi:10.5334/bbc&quot;</span>,
+<span class="w">  </span><span class="s2">&quot;measure_uri&quot;</span>:<span class="w"> </span><span class="s2">&quot;https://metrics.operas-eu.org//up-logs/downloads/v1&quot;</span>,
+<span class="w">  </span><span class="s2">&quot;timestamp&quot;</span>:<span class="w"> </span><span class="s2">&quot;2022-06-01T00:00:00+0000&quot;</span>,
+<span class="w">  </span><span class="s2">&quot;event_uri&quot;</span>:<span class="w"> </span>null,
+<span class="w">  </span><span class="s2">&quot;country_uri&quot;</span>:<span class="w"> </span>null,
+<span class="w">  </span><span class="s2">&quot;value&quot;</span>:<span class="w"> </span><span class="m">5</span>,
+<span class="o">}</span>
+</code></pre></div>
 <p>Fields that can be null:
 * "event_uri" - This is only present if additional information is required to reasonable validate the metrics event. e.g., link to a tweet or DOI of a citing article/book.
 * "country_uri" - This is set as null If country is unknown, or irrelevant (e.g., with a tweet or citation).</p>
