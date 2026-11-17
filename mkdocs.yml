@@ -12,6 +12,13 @@ extra_javascript:
 plugins:
   - awesome-pages
 
+markdown_extensions:
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
 use_directory_urls: true
 
 theme:
@@ -108,6 +115,7 @@ nav:
           - Tokens API: metrics-docs/tokens-api.md
           - Unglue.it: metrics-docs/unglueit.md
           - Figshare: metrics-docs/figshare.md
+      - Bot Detection & Reports: metrics-docs/bot-detection.md
       - Widget: metrics-docs/widget.md
       - Publishers: metrics-docs/publishers.md
 docs_dir: docs

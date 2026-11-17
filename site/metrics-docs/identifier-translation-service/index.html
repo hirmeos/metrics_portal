@@ -1190,6 +1190,28 @@
   
   
     <li class="md-nav__item">
+      <a href="../bot-detection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bot Detection & Reports
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../widget/" class="md-nav__link">
         
   
@@ -1301,7 +1323,7 @@
 </table>
 <h3 id="running-with-docker-compose">Running with docker-compose</h3>
 <p>The easiest way to get a fully featured and functional setup is using a docker-compose file, since the API depends on the <a href="https://github.com/hirmeos/identifiers_db" title="Identifiers database">hirmeos/identifiers_db</a> database.</p>
-<pre><code>version: &quot;3.5&quot;
+<p><div class="highlight"><pre><span></span><code>version: &quot;3.5&quot;
 
 services:
   identifiertranslatorservice_db:
@@ -1329,8 +1351,8 @@ services:
 
 volumes:
   db:
-</code></pre>
-<p>Notes:
+</code></pre></div>
+Notes:
 - The example uses the docker images already built and used by Open Book Publishers. You may use the provided docker files to build your own, instead.
 - You may of course use whatever port you like, and/or use a proxy server (e.g. nginx) to handle the API endpoint.
 - The <code>db</code> volume ensure the contents of the database persist when restarting/deleting the container.
@@ -1488,7 +1510,7 @@ volumes:
 </table>
 <h4 id="translation-example">Translation example</h4>
 <p><code>/translate?uri=urn:isbn:9781906924652&amp;strict=true&amp;filter=work_type:monograph,work_type:book,uri_scheme:info:doi</code> will retrieve a unique book DOI for the given ISBN; if the <code>work_type</code> wasn't specified, the query would fail to retrieve a single DOI, since it would also include chapter DOIs which are associated with that same ISBN.</p>
-<pre><code>{
+<div class="highlight"><pre><span></span><code>{
   &quot;code&quot;: 200,
   &quot;status&quot;: &quot;ok&quot;,
   &quot;data&quot;: [
@@ -1512,7 +1534,7 @@ volumes:
   ],
   &quot;count&quot;: 1
 }
-</code></pre>
+</code></pre></div>
 <h3 id="works-queries"><code>/works</code> Queries</h3>
 <p>This route is used to either retrieve full work records, or to populate the database with new works.</p>
 <h4 id="get-works-parameters"><code>GET /works</code> parameters</h4>
@@ -1537,7 +1559,7 @@ volumes:
 </table>
 <h4 id="get-works-example"><code>GET /works</code> example</h4>
 <p><code>/works?filter=work_type:monograph,work_type:book,uri_scheme:info:doi,canonical:true</code> will retrieve the canonical DOI of all books and monographs.</p>
-<pre><code>{
+<div class="highlight"><pre><span></span><code>{
   &quot;code&quot;: 200,
   &quot;status&quot;: &quot;ok&quot;,
   &quot;count&quot;: 145,
@@ -1564,7 +1586,7 @@ volumes:
     ...
   ]
 }
-</code></pre>
+</code></pre></div>
 <h4 id="post-works-data"><code>POST /works</code> data</h4>
 <table>
 <thead>
@@ -1603,8 +1625,8 @@ volumes:
 </tbody>
 </table>
 <h4 id="post-works-example"><code>POST /works</code> example</h4>
-<p>In this example we use a fictional parent UUID, which could be one of a book series for example - and two child UUIDs, which could represent two chapters in the book.</p>
-<pre><code>{
+<p>In this example we use a fictional parent UUID, which could be one of a book series for example - and two child UUIDs, which could represent two chapters in the book.
+<div class="highlight"><pre><span></span><code>{
   &quot;type&quot;: &quot;monograph&quot;,
   &quot;title&quot;: [
     &quot;That Greece Might Still Be Free: The Philhellenes in the War of Independence&quot;,
@@ -1631,7 +1653,7 @@ volumes:
     &quot;a5175483-8d03-4d82-9522-a039fb8873aa&quot;
   ]
 }
-</code></pre>
+</code></pre></div></p>
 <h4 id="delete-works-data"><code>DELETE /works</code> data</h4>
 <table>
 <thead>

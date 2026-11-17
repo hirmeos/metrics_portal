@@ -11,7 +11,7 @@
         <link rel="canonical" href="http://metrics.operas-eu.org/metrics-docs/widget/">
       
       
-        <link rel="prev" href="../figshare/">
+        <link rel="prev" href="../bot-detection/">
       
       
         <link rel="next" href="../publishers/">
@@ -916,6 +916,28 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../bot-detection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bot Detection & Reports
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -1016,17 +1038,17 @@
 <h1 id="getting-started">Getting Started</h1>
 <h2 id="preferred-react-npm">Preferred: React / npm</h2>
 <p>If you are using React, install and render the component directly (recommended for typed configs and bundler-friendly usage):</p>
-<pre><code class="language-bash">npm install @ubiquitypress/operas-metrics-widget
-</code></pre>
-<pre><code class="language-tsx">import { MetricsWidget, type UserConfig } from '@ubiquitypress/operas-metrics-widget';
-import '@ubiquitypress/operas-metrics-widget/widget.css';
+<div class="highlight"><pre><span></span><code>npm<span class="w"> </span>install<span class="w"> </span>@ubiquitypress/operas-metrics-widget
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">MetricsWidget</span><span class="p">,</span><span class="w"> </span><span class="kr">type</span><span class="w"> </span><span class="nx">UserConfig</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@ubiquitypress/operas-metrics-widget&#39;</span><span class="p">;</span>
+<span class="k">import</span><span class="w"> </span><span class="s1">&#39;@ubiquitypress/operas-metrics-widget/widget.css&#39;</span><span class="p">;</span>
 
-const config: UserConfig = {
-  // ... your configuration
-};
+<span class="kd">const</span><span class="w"> </span><span class="nx">config</span><span class="o">:</span><span class="w"> </span><span class="kt">UserConfig</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// ... your configuration</span>
+<span class="p">};</span>
 
-export const Example = () =&gt; &lt;MetricsWidget config={config} /&gt;;
-</code></pre>
+<span class="k">export</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">Example</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">&lt;</span><span class="nt">MetricsWidget</span><span class="w"> </span><span class="na">config</span><span class="o">=</span><span class="p">{</span><span class="nx">config</span><span class="p">}</span><span class="w"> </span><span class="p">/&gt;;</span>
+</code></pre></div>
 <p>If you are not using React, use the HTML embed below.</p>
 <blockquote>
 <p>Events in React: the component accepts an optional <code>events</code> prop with the same event names as the HTML embed. See <a href="#events">Events</a> for examples.</p>
@@ -1035,31 +1057,31 @@ export const Example = () =&gt; &lt;MetricsWidget config={config} /&gt;;
 </blockquote>
 <h2 id="html-embed-non-react">HTML embed (non-React)</h2>
 <p>The first step is to add a HTML element to the page which will contain the widget:</p>
-<pre><code class="language-html">&lt;div id=&quot;metrics-widget&quot;&gt;&lt;/div&gt;
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;metrics-widget&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
 <p>The widget is configured by default to search for an element with an <code>id</code> attribute of <code>metrics-widget</code>. This can be re-configured later.</p>
 <h2 id="javascript">JavaScript</h2>
 <p>The next step is to add the widget script logic. Within the page, add the following:</p>
-<pre><code class="language-html">&lt;script&gt;
-  window.operaswidget = (e =&gt; {
-    if (document.getElementById(e)) return window.operaswidget;
-    let t = document.createElement('script');
-    (t.id = e),
-      (t.src =
-        'https://storage.googleapis.com/operas/metrics-widget/v1/latest/widget.js');
-    let r = document.getElementsByTagName('body')[0];
-    r.appendChild(t);
-    let i = window.operaswidget || {};
-    return (
-      (i.eventQueue = []),
-      (i.ready = e =&gt; {
-        i.eventQueue.push(e);
-      }),
-      i
-    );
-  })('operas-metrics');
-&lt;/script&gt;
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="w">  </span><span class="nb">window</span><span class="p">.</span><span class="nx">operaswidget</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">e</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="nx">e</span><span class="p">))</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">operaswidget</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;script&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">(</span><span class="nx">t</span><span class="p">.</span><span class="nx">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">e</span><span class="p">),</span>
+<span class="w">      </span><span class="p">(</span><span class="nx">t</span><span class="p">.</span><span class="nx">src</span><span class="w"> </span><span class="o">=</span>
+<span class="w">        </span><span class="s1">&#39;https://storage.googleapis.com/operas/metrics-widget/v1/latest/widget.js&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s1">&#39;body&#39;</span><span class="p">)[</span><span class="mf">0</span><span class="p">];</span>
+<span class="w">    </span><span class="nx">r</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">t</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">operaswidget</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="p">{};</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(</span>
+<span class="w">      </span><span class="p">(</span><span class="nx">i</span><span class="p">.</span><span class="nx">eventQueue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[]),</span>
+<span class="w">      </span><span class="p">(</span><span class="nx">i</span><span class="p">.</span><span class="nx">ready</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">e</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">i</span><span class="p">.</span><span class="nx">eventQueue</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">e</span><span class="p">);</span>
+<span class="w">      </span><span class="p">}),</span>
+<span class="w">      </span><span class="nx">i</span>
+<span class="w">    </span><span class="p">);</span>
+<span class="w">  </span><span class="p">})(</span><span class="s1">&#39;operas-metrics&#39;</span><span class="p">);</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div>
 <p>This script does two main things:</p>
 <ul>
 <li>imports the <code>widget.js</code> script containing the core logic of the widget.</li>
@@ -1074,11 +1096,11 @@ export const Example = () =&gt; &lt;MetricsWidget config={config} /&gt;;
 <p>This is expected until you add the configuration script tag described in the <a href="#configuration">configuration section</a>.</p>
 <h2 id="css">CSS</h2>
 <p>The final step is to import the widget’s CSS:</p>
-<pre><code class="language-html">&lt;link
-  rel=&quot;stylesheet&quot;
-  href=&quot;https://storage.googleapis.com/operas/metrics-widget/v1/latest/widget.css&quot;
-/&gt;
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">link</span>
+  <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span>
+  <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://storage.googleapis.com/operas/metrics-widget/v1/latest/widget.css&quot;</span>
+<span class="p">/&gt;</span>
+</code></pre></div>
 <p>The widget has been designed with <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties">CSS Variables</a> in mind, meaning you should be able to easily override the primary colours (discussed in the <a href="#theming">theming section</a>).</p>
 <p>Although it is recommended to use the default CSS and modify any classes where required, the widget can fully operate without the default stylesheet and you are welcome to create your own styles instead.</p>
 <p>All classes within the widget are prefixed with <code>mw__</code> to avoid any style conflicts.</p>
@@ -1121,10 +1143,10 @@ export const Example = () =&gt; &lt;MetricsWidget config={config} /&gt;;
 <h1 id="configuration">Configuration</h1>
 <p>In order for the widget to run, it relies on another <code>&lt;script&gt;</code> tag containing its configuration in JSON format.</p>
 <p>On the same page as the widget, add an empty JSON script:</p>
-<pre><code class="language-html">&lt;script type=&quot;application/json&quot; id=&quot;operas-metrics-config&quot;&gt;
-  {}
-&lt;/script&gt;
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;application/json&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;operas-metrics-config&quot;</span><span class="p">&gt;</span>
+<span class="w">  </span><span class="p">{}</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div>
 <p><em>Note that the <code>id</code> attribute <code>operas-metrics-config</code> is <strong>not</strong> configurable and must be named exactly.</em></p>
 <p><strong>Quick Reference</strong></p>
 <table>
@@ -1208,16 +1230,16 @@ export const Example = () =&gt; &lt;MetricsWidget config={config} /&gt;;
 </tbody>
 </table>
 <p>In practice, this may look something like this:</p>
-<pre><code class="language-html">&lt;script type=&quot;application/json&quot; id=&quot;operas-metrics-config&quot;&gt;
-  {
-      &quot;settings&quot;: { ... },
-      &quot;options&quot;: { ... },
-      &quot;tabs&quot;: [ ... ],
-      &quot;locales&quot;: { ... },
-      &quot;components&quot;: { ... }
-    }
-&lt;/script&gt;
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;application/json&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;operas-metrics-config&quot;</span><span class="p">&gt;</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">      </span><span class="s2">&quot;settings&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">},</span>
+<span class="w">      </span><span class="s2">&quot;options&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">},</span>
+<span class="w">      </span><span class="s2">&quot;tabs&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">],</span>
+<span class="w">      </span><span class="s2">&quot;locales&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">},</span>
+<span class="w">      </span><span class="s2">&quot;components&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div>
 <h2 id="settings">Settings</h2>
 <p>The settings object contains all of the critical information the widget requires to work.</p>
 <p>All of the properties within the <code>settings</code> field have default values that should allow almost all implementations to work without even defining this field in the configuration object.</p>
@@ -1391,11 +1413,11 @@ export const Example = () =&gt; &lt;MetricsWidget config={config} /&gt;;
 <p>Each graph allows you to specify which scope(s) should provide its data, meaning that you can have additional flexibility for every graph.</p>
 <p>ℹ️ When a tab is rendered in the navigation pane, the <em>count</em> value shown will be the total value of <em>all</em> <code>scopes</code> for that tab. In the image above, <em>1,802</em> is the <em>total</em> value of all scopes for that tab.</p>
 <p>At minimum, a scope is just a name plus <code>works</code> and <code>measures</code>:</p>
-<pre><code class="language-json">&quot;sessions_scope&quot;: {
-  &quot;works&quot;: [&quot;info:doi:10.5334/bbc&quot;],
-  &quot;measures&quot;: [&quot;up-logs/sessions&quot;]
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;sessions_scope&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;works&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;info:doi:10.5334/bbc&quot;</span><span class="p">],</span>
+<span class="w">  </span><span class="nt">&quot;measures&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;up-logs/sessions&quot;</span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
 <p>The following properties are accepted within your scope:</p>
 <table>
 <thead>
@@ -1443,34 +1465,34 @@ export const Example = () =&gt; &lt;MetricsWidget config={config} /&gt;;
 <p>A stacked line graph with three different scopes. Each scope has specified a <code>title</code> property, outlined in red.</p>
 <p>Scopes are intentionally small and composable: you can define multiple scopes, then decide which ones each graph should use.</p>
 <p>Here is a concise “full” example inside a single tab:</p>
-<pre><code class="language-json">{
-  &quot;scopes&quot;: {
-    &quot;book_sessions&quot;: {
-      &quot;works&quot;: [&quot;info:doi:10.5334/bbc&quot;],
-      &quot;measures&quot;: [&quot;up-ga/sessions&quot;]
-    },
-    &quot;chapter_sessions&quot;: {
-      &quot;works&quot;: [&quot;info:doi:10.5334/bbc.a&quot;, &quot;info:doi:10.5334/bbc.b&quot;],
-      &quot;measures&quot;: [&quot;up-logs/sessions&quot;]
-    }
-  },
-  &quot;graphs&quot;: [
-    {
-      &quot;id&quot;: &quot;book_sessions&quot;,
-      &quot;type&quot;: &quot;line&quot;,
-      &quot;title&quot;: &quot;Book sessions&quot;,
-      &quot;scopes&quot;: [&quot;book_sessions&quot;]
-    },
-    {
-      &quot;id&quot;: &quot;combined_sessions&quot;,
-      &quot;type&quot;: &quot;line&quot;,
-      &quot;title&quot;: &quot;Book + chapters&quot;,
-      &quot;scopes&quot;: [&quot;book_sessions&quot;, &quot;chapter_sessions&quot;],
-      &quot;config&quot;: { &quot;stacked&quot;: true }
-    }
-  ]
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;scopes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;book_sessions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;works&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;info:doi:10.5334/bbc&quot;</span><span class="p">],</span>
+<span class="w">      </span><span class="nt">&quot;measures&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;up-ga/sessions&quot;</span><span class="p">]</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;chapter_sessions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;works&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;info:doi:10.5334/bbc.a&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;info:doi:10.5334/bbc.b&quot;</span><span class="p">],</span>
+<span class="w">      </span><span class="nt">&quot;measures&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;up-logs/sessions&quot;</span><span class="p">]</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;graphs&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;book_sessions&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;line&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Book sessions&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;scopes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;book_sessions&quot;</span><span class="p">]</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;combined_sessions&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;line&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Book + chapters&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;scopes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;book_sessions&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;chapter_sessions&quot;</span><span class="p">],</span>
+<span class="w">      </span><span class="nt">&quot;config&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;stacked&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
 <p>There also are no limits on how many scopes you make either, so if you wanted to be extremely specific, there is nothing stopping you splitting all the URIs in <code>chapter_sessions</code> into their <em>own</em> sessions, like <code>chapter_sessions_a</code>, <code>chapter_sessions_b</code>, … and so on. This could allow you to make a stacked graph for every chapter individually, or dynamically update the config depending on which chapter a user is viewing.</p>
 <p>ℹ️ The widget is designed to be as optimal as possible with network requests, caching responses in-memory. This means if you have multiple requests for the same data, only one network request will actually be made.</p>
 <h3 id="graphs">Graphs</h3>
@@ -1830,52 +1852,52 @@ The <code>options</code> object, and all fields within it, can be considered <st
 </tbody>
 </table>
 <p>Custom rows are “atomic”: once you define a row object, the widget will not merge other graphs into or out of it. You can freely mix custom rows with automatically laid-out graphs:</p>
-<pre><code class="language-json">{
-  &quot;graphs&quot;: [
-    {
-      &quot;id&quot;: &quot;row-1&quot;,
-      &quot;class&quot;: &quot;row-highlight&quot;,
-      &quot;graphs&quot;: [
-        { &quot;id&quot;: &quot;sessions-line&quot;, &quot;type&quot;: &quot;line&quot;, &quot;scopes&quot;: [&quot;sessions&quot;] },
-        {
-          &quot;id&quot;: &quot;sessions-map&quot;,
-          &quot;type&quot;: &quot;world_map&quot;,
-          &quot;scopes&quot;: [&quot;sessions&quot;],
-          &quot;options&quot;: { &quot;width&quot;: 50 }
-        }
-      ]
-    },
-    { &quot;id&quot;: &quot;sessions-table&quot;, &quot;type&quot;: &quot;country_table&quot;, &quot;scopes&quot;: [&quot;sessions&quot;] }
-  ]
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;graphs&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;row-1&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;class&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;row-highlight&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;graphs&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sessions-line&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;line&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;scopes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;sessions&quot;</span><span class="p">]</span><span class="w"> </span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sessions-map&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;world_map&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;scopes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;sessions&quot;</span><span class="p">],</span>
+<span class="w">          </span><span class="nt">&quot;options&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;width&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="w"> </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">]</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sessions-table&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;country_table&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;scopes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;sessions&quot;</span><span class="p">]</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
 <h2 id="locales">Locales</h2>
 <p>The widget aims to be as localisable as possible, and in many cases defers localisation to the browser automatically. This is the case for formatting dates, country names, and numbers (eg. <code>1200</code> ⇒ <code>1,200</code> or <code>1.200</code>).</p>
 <p>Some translations within the widget (primarily ones that exist for accessibility) are hard-coded into the widget’s localisation files, but can easily be extended and overwritten in the configuration.</p>
 <p>For other cases, the localisation is expected to be provided as part of a Tab or Graph, such as the <code>name</code> property on a Tab which determines what text will be rendered in the navigation bar or above an individual graph.</p>
 <p>If you need to overwrite any pre-defined localisations within the widget, you can provide a <code>locales</code> object in the root of the widget config JSON. The initial key value must be the language code you wish to override, and the value should be a nested object of all locale fields. As an example:</p>
-<pre><code class="language-json">{
-  &quot;locales&quot;: {
-    &quot;en-GB&quot;: {
-      &quot;loading&quot;: &quot;Loading...&quot;,
-      &quot;navigation&quot;: {
-        &quot;label&quot;: &quot;Navigation&quot;
-      },
-      &quot;graphs&quot;: {
-        &quot;empty&quot;: &quot;No data available&quot;,
-        &quot;hypothesis&quot;: {
-          &quot;date&quot;: &quot;Date&quot;,
-          &quot;author&quot;: &quot;Author&quot;,
-          &quot;summary&quot;: &quot;Summary&quot;
-        },
-        &quot;tweets&quot;: {
-          &quot;load_more&quot;: &quot;More tweets&quot;
-        }
-      }
-    }
-  }
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;locales&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;en-GB&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;loading&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Loading...&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;navigation&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;label&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Navigation&quot;</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="nt">&quot;graphs&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;empty&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;No data available&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;hypothesis&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">&quot;date&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Date&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;author&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Author&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;summary&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Summary&quot;</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">&quot;tweets&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">&quot;load_more&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;More tweets&quot;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 <p>Refer to <code>src/widget/i18n/locales/en-US.json</code> for the most up-to-date structure reference.</p>
 <p>To set the widget to use the language you defined, you simply need to set the <code>settings.locale</code> string to match whatever language code was in the root of your tree.</p>
 <p>You don’t necessarily need to re-write the <em>entire</em> JSON tree structure, as the widget will automatically fallback to a supported language if no localisation is found.</p>
@@ -1963,66 +1985,66 @@ The <code>options</code> object, and all fields within it, can be considered <st
 </table>
 <h2 id="example">Example</h2>
 <p>Here is an example illustrating every possible widget event, made possible by simply using a <code>&lt;script&gt;</code> tag on the same page as the widget:</p>
-<pre><code class="language-html">&lt;script&gt;
-  // Store events to be called by the widget when it is ready
-  operaswidget.ready(w =&gt; {
-    w.events.on('widget_loading', () =&gt; {
-      console.log('the widget is loading');
-    });
-    w.events.on('widget_loading', () =&gt; {
-      console.log('the widget is loading again');
-    });
-    w.events.on('widget_ready', tabs =&gt; {
-      console.log('the widget has been loaded', tabs);
-    });
-    w.events.on('widget_ready', tabs =&gt; {
-      console.log('the widget has been loaded x2', tabs);
-    });
-    w.events.on('widget_ready', tabs =&gt; {
-      console.log('the widget has been loaded x3', tabs);
-    });
-    w.events.on('tab_panel_loading', tab =&gt; {
-      console.log('the panel is loading', tab);
-    });
-    w.events.on('tab_panel_ready', tab =&gt; {
-      console.log('the panel has been loaded', tab);
-    });
-    w.events.on('graph_loading', (graph, tab) =&gt; {
-      console.log('the graph is loading', graph.id, 'in tab', tab.id);
-    });
-    w.events.on('graph_ready', (graph, tab) =&gt; {
-      console.log('the graph has been loaded', graph.id, 'in tab', tab.id);
-    });
-  });
-&lt;/script&gt;
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="w">  </span><span class="c1">// Store events to be called by the widget when it is ready</span>
+<span class="w">  </span><span class="nx">operaswidget</span><span class="p">.</span><span class="nx">ready</span><span class="p">(</span><span class="nx">w</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">w</span><span class="p">.</span><span class="nx">events</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;widget_loading&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;the widget is loading&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">});</span>
+<span class="w">    </span><span class="nx">w</span><span class="p">.</span><span class="nx">events</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;widget_loading&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;the widget is loading again&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">});</span>
+<span class="w">    </span><span class="nx">w</span><span class="p">.</span><span class="nx">events</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;widget_ready&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">tabs</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;the widget has been loaded&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">tabs</span><span class="p">);</span>
+<span class="w">    </span><span class="p">});</span>
+<span class="w">    </span><span class="nx">w</span><span class="p">.</span><span class="nx">events</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;widget_ready&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">tabs</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;the widget has been loaded x2&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">tabs</span><span class="p">);</span>
+<span class="w">    </span><span class="p">});</span>
+<span class="w">    </span><span class="nx">w</span><span class="p">.</span><span class="nx">events</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;widget_ready&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">tabs</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;the widget has been loaded x3&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">tabs</span><span class="p">);</span>
+<span class="w">    </span><span class="p">});</span>
+<span class="w">    </span><span class="nx">w</span><span class="p">.</span><span class="nx">events</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;tab_panel_loading&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">tab</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;the panel is loading&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">tab</span><span class="p">);</span>
+<span class="w">    </span><span class="p">});</span>
+<span class="w">    </span><span class="nx">w</span><span class="p">.</span><span class="nx">events</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;tab_panel_ready&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">tab</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;the panel has been loaded&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">tab</span><span class="p">);</span>
+<span class="w">    </span><span class="p">});</span>
+<span class="w">    </span><span class="nx">w</span><span class="p">.</span><span class="nx">events</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;graph_loading&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="nx">graph</span><span class="p">,</span><span class="w"> </span><span class="nx">tab</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;the graph is loading&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">graph</span><span class="p">.</span><span class="nx">id</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;in tab&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">tab</span><span class="p">.</span><span class="nx">id</span><span class="p">);</span>
+<span class="w">    </span><span class="p">});</span>
+<span class="w">    </span><span class="nx">w</span><span class="p">.</span><span class="nx">events</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;graph_ready&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="nx">graph</span><span class="p">,</span><span class="w"> </span><span class="nx">tab</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;the graph has been loaded&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">graph</span><span class="p">.</span><span class="nx">id</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;in tab&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">tab</span><span class="p">.</span><span class="nx">id</span><span class="p">);</span>
+<span class="w">    </span><span class="p">});</span>
+<span class="w">  </span><span class="p">});</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div>
 <p>One notable feature here is that you can specify as many repeat events as possible, and each will be executed separately. For instance, there are three <code>widget_ready</code> listeners being defined, and each will be called sequentially once that event is triggered.</p>
 <h3 id="react-example">React example</h3>
 <p>The React entrypoint exposes an <code>events</code> prop with the same event names:</p>
-<pre><code class="language-tsx">&lt;MetricsWidget
-  config={config}
-  events={{
-    widget_loading: () =&gt; console.log('widget loading'),
-    widget_ready: tabs =&gt; console.log('widget ready', tabs)
-  }}
-/&gt;
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">MetricsWidget</span>
+<span class="w">  </span><span class="na">config</span><span class="o">=</span><span class="p">{</span><span class="nx">config</span><span class="p">}</span>
+<span class="w">  </span><span class="na">events</span><span class="o">=</span><span class="p">{{</span>
+<span class="w">    </span><span class="nx">widget_loading</span><span class="o">:</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;widget loading&#39;</span><span class="p">),</span>
+<span class="w">    </span><span class="nx">widget_ready</span><span class="o">:</span><span class="w"> </span><span class="kt">tabs</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;widget ready&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">tabs</span><span class="p">)</span>
+<span class="w">  </span><span class="p">}}</span>
+<span class="p">/&gt;</span>
+</code></pre></div>
 <p>This is useful for driving your own loading states without inspecting the DOM.</p>
 <h2 id="use-case-example">Use-case Example</h2>
 <p>One common use-case for widget events might be to hide the widget’s container until it has finished loading. Since the widget doesn’t know if it has any data until it has finished loading, you may not want to show <em>anything</em> until we know there is data to be shown.</p>
 <p>For example, let’s say we have the following UI that we only want to show once we know there is data available.</p>
-<pre><code class="language-html">&lt;section id=&quot;metrics-container&quot; class=&quot;widget loading&quot;&gt;
-  &lt;h1&gt;Metrics&lt;/h1&gt;
-  &lt;div id=&quot;metrics-widget&quot;&gt;&lt;/div&gt;
-&lt;/section&gt;
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">section</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;metrics-container&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;widget loading&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Metrics<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;metrics-widget&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
+</code></pre></div>
 <p>To do this, we could add some CSS so that <code>widget.loading</code> (the default state) will <a href="https://www.a11yproject.com/posts/how-to-hide-content/">visually hide</a> the widget. Then, we can simply add some JavaScript to listen to the <code>widget_ready</code> event to remove the <code>loading</code> class:</p>
-<pre><code class="language-js">w.events.on('widget_ready', tabs =&gt; {
-  if (tabs.length) {
-    document.getElementById('metrics-container').classList.remove('loading');
-  }
-});
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nx">w</span><span class="p">.</span><span class="nx">events</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;widget_ready&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">tabs</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">tabs</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;metrics-container&#39;</span><span class="p">).</span><span class="nx">classList</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="s1">&#39;loading&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div>
 <p>*<em>Note you’ll probably want to add additional accessible attributes like <code>aria-hidden</code>, but that’s outside the scope of this documentation</em></p>
 <p>You could also build on this to show a specific message/component if the widget loads without data being available.</p>
 <h1 id="theming">Theming</h1>
@@ -2081,19 +2103,19 @@ The <code>options</code> object, and all fields within it, can be considered <st
 </tbody>
 </table>
 <p>Here is an example of how you would use the CSS variables:</p>
-<pre><code class="language-css">#metrics-widget {
-  --color-primary: #506cd3; /* [1] */
-  --color-primary-light: #edf0fb; /* [2] */
-  --color-primary-dark: #506bd3; /* [3] */
-  --color-secondary: #899de2; /* [4] */
-  --color-world-map: #dbe1f6; /* [5] */
-  --color-world-map-dark: #899de2; /* [6] */
-  --color-line-graph-1: #4b7094; /* [7] */
-  --color-line-graph-2: #70944b; /* [8] */
-  --color-line-graph-3: #944b70; /* [9] */
-  --color-line-graph-4: #94704b; /* [10] */
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="p">#</span><span class="nn">metrics-widget</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nv">--color-primary</span><span class="p">:</span><span class="w"> </span><span class="mh">#506cd3</span><span class="p">;</span><span class="w"> </span><span class="c">/* [1] */</span>
+<span class="w">  </span><span class="nv">--color-primary-light</span><span class="p">:</span><span class="w"> </span><span class="mh">#edf0fb</span><span class="p">;</span><span class="w"> </span><span class="c">/* [2] */</span>
+<span class="w">  </span><span class="nv">--color-primary-dark</span><span class="p">:</span><span class="w"> </span><span class="mh">#506bd3</span><span class="p">;</span><span class="w"> </span><span class="c">/* [3] */</span>
+<span class="w">  </span><span class="nv">--color-secondary</span><span class="p">:</span><span class="w"> </span><span class="mh">#899de2</span><span class="p">;</span><span class="w"> </span><span class="c">/* [4] */</span>
+<span class="w">  </span><span class="nv">--color-world-map</span><span class="p">:</span><span class="w"> </span><span class="mh">#dbe1f6</span><span class="p">;</span><span class="w"> </span><span class="c">/* [5] */</span>
+<span class="w">  </span><span class="nv">--color-world-map-dark</span><span class="p">:</span><span class="w"> </span><span class="mh">#899de2</span><span class="p">;</span><span class="w"> </span><span class="c">/* [6] */</span>
+<span class="w">  </span><span class="nv">--color-line-graph-1</span><span class="p">:</span><span class="w"> </span><span class="mh">#4b7094</span><span class="p">;</span><span class="w"> </span><span class="c">/* [7] */</span>
+<span class="w">  </span><span class="nv">--color-line-graph-2</span><span class="p">:</span><span class="w"> </span><span class="mh">#70944b</span><span class="p">;</span><span class="w"> </span><span class="c">/* [8] */</span>
+<span class="w">  </span><span class="nv">--color-line-graph-3</span><span class="p">:</span><span class="w"> </span><span class="mh">#944b70</span><span class="p">;</span><span class="w"> </span><span class="c">/* [9] */</span>
+<span class="w">  </span><span class="nv">--color-line-graph-4</span><span class="p">:</span><span class="w"> </span><span class="mh">#94704b</span><span class="p">;</span><span class="w"> </span><span class="c">/* [10] */</span>
+<span class="p">}</span>
+</code></pre></div>
 <p><img src="https://storage.googleapis.com/operas/metrics-widget/docs/theming.png" style="max-width: 300px;"><br/></p>
 <p>Whilst all browsers should support CSS Variables, you are welcome to completely ignore them and manually override the individual widget classes in your own stylesheets.</p>
 <p>Alternatively, the widget will still fully function even if you choose to not import the default <code>widget.css</code> file at all and opt to completely style it manually.</p>
@@ -2121,9 +2143,9 @@ The <code>options</code> object, and all fields within it, can be considered <st
 <li>Run <code>npm run check</code> (and optionally <code>npm run build</code>) locally.</li>
 <li>Create and push a tag that matches the package version:</li>
 </ol>
-<pre><code class="language-bash">git tag v1.3.17
-git push origin v1.3.17
-</code></pre>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>tag<span class="w"> </span>v1.3.17
+git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>v1.3.17
+</code></pre></div>
 <p>On tag push, CI will:</p>
 <ol>
 <li>lint and typecheck</li>
