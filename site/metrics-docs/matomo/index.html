@@ -980,6 +980,28 @@
   
   
     <li class="md-nav__item">
+      <a href="../bot-detection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bot Detection & Reports
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../widget/" class="md-nav__link">
         
   
@@ -1094,37 +1116,37 @@
 </tbody>
 </table>
 <h3 id="example-of-a-yaml-file">Example of a yaml file:</h3>
-<pre><code class="language-yaml">base_url: 'https://demo.press.matomo.cloud'
-site_auth: ''
-site_id: '1'
-depth: 5
-start_date: '2023-01-01'
-views: {
-  &quot;&lt;measure_uri_1&gt;&quot;: {  # e.g. For abstract views
-    &quot;segment&quot;: &lt;matomo segment&gt; # Optional,
-    &quot;regex&quot;: {
-      &quot;include&quot;: [&quot;&lt;URL pattern of results to keep&gt;&quot;], # optional
-      &quot;exclude&quot;: [&quot;&lt;URL pattern of results to ignore&gt;&quot;], # optional
-    }
-  &quot;&lt;measure_uri_2&gt;&quot;: { &lt;etc&gt; }  For ebook reads
-}
-downloads: {
-  &quot;&lt;measure_uri_1&gt;&quot;: {
-    &quot;regex&quot;: {
-      &quot;include&quot;: [
-        '&lt;REGEX&gt;',
-      ],
-    }
-  },
-}
-events: {
-  &quot;&lt;measure_uri_1&gt;&quot;: [  # Event categories to save against this measure
-    &quot;&lt;category_1&gt;&quot;,
-    &quot;&lt;category_2&gt;&quot;,
-  ],
-  &quot;&lt;measure_uri_2&gt;&quot;: [ &lt;etc&gt; ],
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nt">base_url</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;https://demo.press.matomo.cloud&#39;</span>
+<span class="nt">site_auth</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;&#39;</span>
+<span class="nt">site_id</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;1&#39;</span>
+<span class="nt">depth</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
+<span class="nt">start_date</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;2023-01-01&#39;</span>
+<span class="nt">views</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span>
+<span class="w">  </span><span class="s">&quot;&lt;measure_uri_1&gt;&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="w">  </span><span class="c1"># e.g. For abstract views</span>
+<span class="w">    </span><span class="s">&quot;segment&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="nv">&lt;matomo segment&gt;</span><span class="w"> </span><span class="c1"># Optional,</span>
+<span class="w">    </span><span class="s">&quot;regex&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="p p-Indicator">{</span>
+<span class="w">      </span><span class="s">&quot;include&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;&lt;URL</span><span class="nv"> </span><span class="s">pattern</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">results</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">keep&gt;&quot;</span><span class="p p-Indicator">],</span><span class="w"> </span><span class="c1"># optional</span>
+<span class="w">      </span><span class="s">&quot;exclude&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;&lt;URL</span><span class="nv"> </span><span class="s">pattern</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">results</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">ignore&gt;&quot;</span><span class="p p-Indicator">],</span><span class="w"> </span><span class="c1"># optional</span>
+<span class="w">    </span><span class="p p-Indicator">}</span>
+<span class="w">  </span><span class="s">&quot;&lt;measure_uri_2&gt;&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="w"> </span><span class="nv">&lt;etc&gt;</span><span class="w"> </span><span class="p p-Indicator">}</span><span class="w">  </span><span class="nv">For ebook reads</span>
+<span class="p p-Indicator">}</span>
+<span class="nt">downloads</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span>
+<span class="w">  </span><span class="s">&quot;&lt;measure_uri_1&gt;&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="p p-Indicator">{</span>
+<span class="w">    </span><span class="s">&quot;regex&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="p p-Indicator">{</span>
+<span class="w">      </span><span class="s">&quot;include&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="p p-Indicator">[</span>
+<span class="w">        </span><span class="s">&#39;&lt;REGEX&gt;&#39;</span><span class="p p-Indicator">,</span>
+<span class="w">      </span><span class="p p-Indicator">],</span>
+<span class="w">    </span><span class="p p-Indicator">}</span>
+<span class="w">  </span><span class="p p-Indicator">},</span>
+<span class="p p-Indicator">}</span>
+<span class="nt">events</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span>
+<span class="w">  </span><span class="s">&quot;&lt;measure_uri_1&gt;&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w">  </span><span class="c1"># Event categories to save against this measure</span>
+<span class="w">    </span><span class="s">&quot;&lt;category_1&gt;&quot;</span><span class="p p-Indicator">,</span>
+<span class="w">    </span><span class="s">&quot;&lt;category_2&gt;&quot;</span><span class="p p-Indicator">,</span>
+<span class="w">  </span><span class="p p-Indicator">],</span>
+<span class="w">  </span><span class="s">&quot;&lt;measure_uri_2&gt;&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="nv">&lt;etc&gt;</span><span class="w"> </span><span class="p p-Indicator">],</span>
+<span class="p p-Indicator">}</span>
+</code></pre></div>
 
 
 
