@@ -14,25 +14,31 @@ The Metrics service checks every visit it collects from access logs and removes 
 4. **Sending a daily report.** Once all access logs for a day have been processed, the system emails a summary to the metrics team. It lists the most common visitors that were rejected as bots and those that were accepted as people.
 5. **Reviewing and improving.** The team reads the report to spot new bots that slipped through, or real visitors that were blocked by mistake, and updates the bot list.
 
-### Journals: a firewall before everything else
+### A firewall before everything else
 
-Journals have an extra layer of protection that acts **before** all of the steps above. Journal websites run on Google Cloud, and a firewall stops a large part of the unwanted traffic before it reaches the website.
+There is an extra layer of protection that acts **before** all of the steps above. Our websites run on Google Cloud, and a firewall stops a large part of the unwanted traffic before it reaches the website.
 
 - **It blocks whole networks, not individual visitors.** Every device on the internet has an address (an *IP address*). Addresses are grouped into networks, and each network belongs to one organisation, such as an internet provider, a university or a hosting company. Each network has its own number, called an *ASN*.
-- **The blocked networks are mostly data centres and cloud hosting companies.** These are the places where automated programs run in large numbers, and real readers rarely browse from them. The firewall keeps one rule per blocked network.
-- **Blocked traffic is turned away entirely.** It never reaches the journal and never appears in the access logs, so it can never be counted as a metric.
-- **Trusted services are let through.** A few partner services that need to contact the journals are explicitly allowed, even when they come from a hosting network.
+- **The blocked networks are data centres and cloud hosting companies.** These are the places where automated programs run in large numbers, and real readers rarely browse from them. The firewall keeps one rule per blocked network.
+- **Blocked traffic is turned away entirely.** It never reaches the website and never appears in the access logs, so it can never be counted as a metric.
+- **Trusted services are let through.** A few partner services that need to contact our websites are explicitly allowed, even when they come from a hosting network.
 - **The rules are kept up to date.** When monitoring shows an unusual spike in traffic, the source is checked and, if it is automated, its network is added to the firewall.
 
-The two layers work together. The firewall stops large volumes of traffic from networks known to host bots. The bot list then catches the bots that get through, for example search engines and AI agents, which come from ordinary networks but identify themselves in their user agent.
+### Google Cloud Armor
+
+Traffic that gets past the firewall then goes through [Google Cloud Armor](https://cloud.google.com/security/products/armor), Google's security service that sits in front of our websites. It is a second layer of bot filtering, still applied **before** a visit reaches the website or the access logs. Cloud Armor looks at the behaviour of each request, not just where it comes from, and turns away traffic that looks automated, for example a visitor sending far more requests than a person could.
+
+The layers work together. The firewall stops large volumes of traffic from networks known to host bots. Cloud Armor catches automated traffic coming from other networks. The bot list then catches the bots that get through, for example search engines and AI agents, which come from ordinary networks but identify themselves in their user agent.
 
 ## Flow chart
 
 ```mermaid
 flowchart TD
-    V[Someone or something<br/>visits a publication] --> FW{Journals only:<br/>does it come from a<br/>blocked network?}
+    V[Someone or something<br/>visits, reads or downloads<br/>a publication] --> FW{Does it come from a<br/>blocked network?}
     FW -- Yes --> X[Blocked by the firewall<br/>never reaches the site]
-    FW -- No --> A
+    FW -- No --> CA{Does Google Cloud Armor<br/>flag it as automated?}
+    CA -- Yes --> Y[Blocked by Cloud Armor<br/>never reaches the site]
+    CA -- No --> A
     A[Visits to publications<br/>are recorded in access logs] --> B[Each day, the Metrics service<br/>collects the access logs]
     L[(List of known bots<br/>our own list + public lists)] --> C
     B --> C{Does the visit come<br/>from a known bot?}

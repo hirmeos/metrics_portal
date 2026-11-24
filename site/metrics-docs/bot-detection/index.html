@@ -986,9 +986,18 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#journals-a-firewall-before-everything-else" class="md-nav__link">
+  <a href="#a-firewall-before-everything-else" class="md-nav__link">
     <span class="md-ellipsis">
-      Journals: a firewall before everything else
+      A firewall before everything else
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#google-cloud-armor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Google Cloud Armor
     </span>
   </a>
   
@@ -1114,21 +1123,25 @@
 <li><strong>Sending a daily report.</strong> Once all access logs for a day have been processed, the system emails a summary to the metrics team. It lists the most common visitors that were rejected as bots and those that were accepted as people.</li>
 <li><strong>Reviewing and improving.</strong> The team reads the report to spot new bots that slipped through, or real visitors that were blocked by mistake, and updates the bot list.</li>
 </ol>
-<h3 id="journals-a-firewall-before-everything-else">Journals: a firewall before everything else</h3>
-<p>Journals have an extra layer of protection that acts <strong>before</strong> all of the steps above. Journal websites run on Google Cloud, and a firewall stops a large part of the unwanted traffic before it reaches the website.</p>
+<h3 id="a-firewall-before-everything-else">A firewall before everything else</h3>
+<p>There is an extra layer of protection that acts <strong>before</strong> all of the steps above. Our websites run on Google Cloud, and a firewall stops a large part of the unwanted traffic before it reaches the website.</p>
 <ul>
 <li><strong>It blocks whole networks, not individual visitors.</strong> Every device on the internet has an address (an <em>IP address</em>). Addresses are grouped into networks, and each network belongs to one organisation, such as an internet provider, a university or a hosting company. Each network has its own number, called an <em>ASN</em>.</li>
-<li><strong>The blocked networks are mostly data centres and cloud hosting companies.</strong> These are the places where automated programs run in large numbers, and real readers rarely browse from them. The firewall keeps one rule per blocked network.</li>
-<li><strong>Blocked traffic is turned away entirely.</strong> It never reaches the journal and never appears in the access logs, so it can never be counted as a metric.</li>
-<li><strong>Trusted services are let through.</strong> A few partner services that need to contact the journals are explicitly allowed, even when they come from a hosting network.</li>
+<li><strong>The blocked networks are data centres and cloud hosting companies.</strong> These are the places where automated programs run in large numbers, and real readers rarely browse from them. The firewall keeps one rule per blocked network.</li>
+<li><strong>Blocked traffic is turned away entirely.</strong> It never reaches the website and never appears in the access logs, so it can never be counted as a metric.</li>
+<li><strong>Trusted services are let through.</strong> A few partner services that need to contact our websites are explicitly allowed, even when they come from a hosting network.</li>
 <li><strong>The rules are kept up to date.</strong> When monitoring shows an unusual spike in traffic, the source is checked and, if it is automated, its network is added to the firewall.</li>
 </ul>
-<p>The two layers work together. The firewall stops large volumes of traffic from networks known to host bots. The bot list then catches the bots that get through, for example search engines and AI agents, which come from ordinary networks but identify themselves in their user agent.</p>
+<h3 id="google-cloud-armor">Google Cloud Armor</h3>
+<p>Traffic that gets past the firewall then goes through <a href="https://cloud.google.com/security/products/armor">Google Cloud Armor</a>, Google's security service that sits in front of our websites. It is a second layer of bot filtering, still applied <strong>before</strong> a visit reaches the website or the access logs. Cloud Armor looks at the behaviour of each request, not just where it comes from, and turns away traffic that looks automated, for example a visitor sending far more requests than a person could.</p>
+<p>The layers work together. The firewall stops large volumes of traffic from networks known to host bots. Cloud Armor catches automated traffic coming from other networks. The bot list then catches the bots that get through, for example search engines and AI agents, which come from ordinary networks but identify themselves in their user agent.</p>
 <h2 id="flow-chart">Flow chart</h2>
 <pre class="mermaid"><code>flowchart TD
-    V[Someone or something&lt;br/&gt;visits a publication] --&gt; FW{Journals only:&lt;br/&gt;does it come from a&lt;br/&gt;blocked network?}
+    V[Someone or something&lt;br/&gt;visits, reads or downloads&lt;br/&gt;a publication] --&gt; FW{Does it come from a&lt;br/&gt;blocked network?}
     FW -- Yes --&gt; X[Blocked by the firewall&lt;br/&gt;never reaches the site]
-    FW -- No --&gt; A
+    FW -- No --&gt; CA{Does Google Cloud Armor&lt;br/&gt;flag it as automated?}
+    CA -- Yes --&gt; Y[Blocked by Cloud Armor&lt;br/&gt;never reaches the site]
+    CA -- No --&gt; A
     A[Visits to publications&lt;br/&gt;are recorded in access logs] --&gt; B[Each day, the Metrics service&lt;br/&gt;collects the access logs]
     L[(List of known bots&lt;br/&gt;our own list + public lists)] --&gt; C
     B --&gt; C{Does the visit come&lt;br/&gt;from a known bot?}
