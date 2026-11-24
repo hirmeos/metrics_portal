@@ -226,3 +226,66 @@ img {
   visibility: visible;
   opacity: 1;
 }
+
+/* Bot detection: sample report email */
+.bot-email {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 1.5em 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  font-size: 0.72rem;
+}
+.bot-email__header {
+  background: var(--md-code-bg-color);
+  padding: 0.8em 1.2em;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+  line-height: 1.8;
+}
+.bot-email__label {
+  display: inline-block;
+  min-width: 4.5em;
+  color: var(--md-default-fg-color--light);
+}
+.bot-email__body { padding: 1em 1.2em; }
+.md-typeset .bot-email__title { margin: 0 0 0.6em; }
+.md-typeset .bot-email__section { margin: 1.4em 0 0.6em; }
+.md-typeset .bot-email__meta {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.2em 1em;
+  margin: 0;
+}
+.md-typeset .bot-email__meta dt { font-weight: 600; margin: 0; }
+.md-typeset .bot-email__meta dd { margin: 0; }
+.bot-email__stats { display: flex; flex-wrap: wrap; gap: 0.8em; }
+.bot-email__stat {
+  flex: 1 1 10em;
+  border-left: 4px solid var(--md-accent-fg-color);
+  background: var(--md-code-bg-color);
+  padding: 0.5em 0.8em;
+  border-radius: 4px;
+}
+.bot-email__stat strong { display: block; font-size: 1.4em; }
+.bot-email__stat span { color: var(--md-default-fg-color--light); }
+.md-typeset .bot-email__note { color: var(--md-default-fg-color--light); margin: 0.8em 0; }
+.bot-email__table-wrap { overflow-x: auto; }
+.md-typeset table.bot-email__table {
+  display: table;
+  width: 100%;
+  font-size: 0.95em;
+  border-collapse: collapse;
+}
+.md-typeset .bot-email__table th,
+.md-typeset .bot-email__table td {
+  padding: 0.45em 0.6em;
+  vertical-align: top;
+  word-break: break-word;
+}
+.md-typeset .bot-email__table td:first-child {
+  font-weight: 600;
+  text-align: right;
+  white-space: nowrap;
+}
+.md-typeset .bot-email__table td:nth-child(2) { min-width: 16em; }
+.md-typeset .bot-email__table td:nth-child(3) { min-width: 12em; color: var(--md-default-fg-color--light); }

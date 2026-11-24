@@ -980,6 +980,28 @@
   
   
     <li class="md-nav__item">
+      <a href="../bot-detection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bot Detection & Reports
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../widget/" class="md-nav__link">
         
   
@@ -1125,37 +1147,37 @@
 </tbody>
 </table>
 <h3 id="example-of-plugin-configuration-file">Example of plugin configuration file:</h3>
-<pre><code class="language-yaml">json_key:
-  type: service_account
-  project_id: test-accesslogs
-  private_key_id: test
-  private_key: 'test'
-  client_email: test@test.com
-  client_id: '999999999999999999999'
-  auth_uri: https://accounts.google.com/o/oauth2/auth
-  token_uri: https://auth.test.com
-  auth_provider_x509_cert_url: https://www.auth.provider.test.com
-  client_x509_cert_url: https://www.client.test.com
-measure_regexes:
-  downloads:
-    measure: https://measure.test.com
-    order: 0
-    regex: /site/(books|chapters)/10.\d{4,9}/[-._;(/:A-Za-z0-9]+/download/\d+
-  reads:
-    measure: https://reads.test.com
-    order: 1
-    regex: /site/(books|chapters)/10.\d{4,9}/[-._;()/:A-Za-z0-9]+/read
-  views:
-    measure: https://views.test.com
-    order: 2
-    regex: /site/(books|chapters)/([em]/)?10.\d{4,9}/[-._;()/:A-Za-z0-9]+
-request_host_filter: www.test.com OR test.com
-request_path_filter: (&quot;/site/books&quot; OR &quot;/site/chapters&quot;) AND NOT (&quot;metrics&quot; OR &quot;indexer&quot;
-  OR &quot;citation&quot; OR &quot;filter&quot;)
-start_date: '20000-01-01'
+<div class="highlight"><pre><span></span><code><span class="nt">json_key</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">service_account</span>
+<span class="w">  </span><span class="nt">project_id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">test-accesslogs</span>
+<span class="w">  </span><span class="nt">private_key_id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">test</span>
+<span class="w">  </span><span class="nt">private_key</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;test&#39;</span>
+<span class="w">  </span><span class="nt">client_email</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">test@test.com</span>
+<span class="w">  </span><span class="nt">client_id</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;999999999999999999999&#39;</span>
+<span class="w">  </span><span class="nt">auth_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://accounts.google.com/o/oauth2/auth</span>
+<span class="w">  </span><span class="nt">token_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://auth.test.com</span>
+<span class="w">  </span><span class="nt">auth_provider_x509_cert_url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.auth.provider.test.com</span>
+<span class="w">  </span><span class="nt">client_x509_cert_url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.client.test.com</span>
+<span class="nt">measure_regexes</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">downloads</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">measure</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://measure.test.com</span>
+<span class="w">    </span><span class="nt">order</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">    </span><span class="nt">regex</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/site/(books|chapters)/10.\d{4,9}/[-._;(/:A-Za-z0-9]+/download/\d+</span>
+<span class="w">  </span><span class="nt">reads</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">measure</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://reads.test.com</span>
+<span class="w">    </span><span class="nt">order</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="nt">regex</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/site/(books|chapters)/10.\d{4,9}/[-._;()/:A-Za-z0-9]+/read</span>
+<span class="w">  </span><span class="nt">views</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">measure</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://views.test.com</span>
+<span class="w">    </span><span class="nt">order</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="w">    </span><span class="nt">regex</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/site/(books|chapters)/([em]/)?10.\d{4,9}/[-._;()/:A-Za-z0-9]+</span>
+<span class="nt">request_host_filter</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">www.test.com OR test.com</span>
+<span class="nt">request_path_filter</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(&quot;/site/books&quot; OR &quot;/site/chapters&quot;) AND NOT (&quot;metrics&quot; OR &quot;indexer&quot;</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">OR &quot;citation&quot; OR &quot;filter&quot;)</span>
+<span class="nt">start_date</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;20000-01-01&#39;</span>
 
-active: false
-</code></pre>
+<span class="nt">active</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+</code></pre></div>
 
 
 

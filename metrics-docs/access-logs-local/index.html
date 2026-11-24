@@ -980,6 +980,28 @@
   
   
     <li class="md-nav__item">
+      <a href="../bot-detection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bot Detection & Reports
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../widget/" class="md-nav__link">
         
   
@@ -1097,29 +1119,29 @@ a URL within the last <code>session_timeout</code> (e.g. half-hour)</p>
 </tbody>
 </table>
 <h3 id="example-of-plugin-configuration-file">Example of plugin configuration file:</h3>
-<pre><code class="language-yaml">measure_regexes: [
-  {
-    name: &quot;downloads&quot;,
-    measure: 'https://test-metrics.com/access-logs-test/downloads/v1',
-    regex: ['https:\/\/cjs\.sljol\.info/articles/10.\d{4,9}/[ -._;(/:A-Za-z0-9 ]+/galley/\d+/download/?', ],
-  },
-  {
-    name: &quot;sessions&quot;,
-    measure: 'https://metrics.com/access-logs-test/sessions/v1',
-    regex: ['https:\/\/cjs\.sljol\.info/articles/10.\d{4,9}/[ -._;(/:A-Za-z0-9 ]+/?', ],
-  }
-]
-excluded_ips: [&quot;8.8.8.8&quot;, &quot;9.9.9.9&quot;]
-excluded_urls: [&quot;https://malformed_url.com&quot;]
-logdir: &quot;plugins/access_logs_local/logs&quot;
-url_prefix: 'https://cjs.sljol.info'
-session_timeout: 1800
-rollover: false
-cutoff_days: 3
-start_date: '2023-06-01'
-uri_scheme: &quot;info:doi&quot;
-active: false   # set to true for local testing...
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nt">measure_regexes</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span>
+<span class="w">  </span><span class="p p-Indicator">{</span>
+<span class="nt">    name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;downloads&quot;</span><span class="p p-Indicator">,</span>
+<span class="nt">    measure</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;https://test-metrics.com/access-logs-test/downloads/v1&#39;</span><span class="p p-Indicator">,</span>
+<span class="nt">    regex</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&#39;https:\/\/cjs\.sljol\.info/articles/10.\d{4,9}/[</span><span class="nv"> </span><span class="s">-._;(/:A-Za-z0-9</span><span class="nv"> </span><span class="s">]+/galley/\d+/download/?&#39;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="p p-Indicator">],</span>
+<span class="w">  </span><span class="p p-Indicator">},</span>
+<span class="w">  </span><span class="p p-Indicator">{</span>
+<span class="nt">    name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;sessions&quot;</span><span class="p p-Indicator">,</span>
+<span class="nt">    measure</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;https://metrics.com/access-logs-test/sessions/v1&#39;</span><span class="p p-Indicator">,</span>
+<span class="nt">    regex</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&#39;https:\/\/cjs\.sljol\.info/articles/10.\d{4,9}/[</span><span class="nv"> </span><span class="s">-._;(/:A-Za-z0-9</span><span class="nv"> </span><span class="s">]+/?&#39;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="p p-Indicator">],</span>
+<span class="w">  </span><span class="p p-Indicator">}</span>
+<span class="p p-Indicator">]</span>
+<span class="nt">excluded_ips</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;8.8.8.8&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;9.9.9.9&quot;</span><span class="p p-Indicator">]</span>
+<span class="nt">excluded_urls</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;https://malformed_url.com&quot;</span><span class="p p-Indicator">]</span>
+<span class="nt">logdir</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;plugins/access_logs_local/logs&quot;</span>
+<span class="nt">url_prefix</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;https://cjs.sljol.info&#39;</span>
+<span class="nt">session_timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1800</span>
+<span class="nt">rollover</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="nt">cutoff_days</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="nt">start_date</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;2023-06-01&#39;</span>
+<span class="nt">uri_scheme</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;info:doi&quot;</span>
+<span class="nt">active</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w">   </span><span class="c1"># set to true for local testing...</span>
+</code></pre></div>
 
 
 

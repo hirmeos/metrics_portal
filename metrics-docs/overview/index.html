@@ -1044,6 +1044,28 @@
   
   
     <li class="md-nav__item">
+      <a href="../bot-detection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bot Detection & Reports
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../widget/" class="md-nav__link">
         
   
@@ -1170,21 +1192,21 @@ Relationships API which is a separate service combining results from
 <p>There is a directory called <code>docker</code> where all the config files for this step
 are located to run the system as follows:</p>
 <p>Build docker image from the parent directory:</p>
-<pre><code class="language-bash">$ sudo docker build -t metrics-drivers -f docker/Dockerfile .
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>sudo<span class="w"> </span>docker<span class="w"> </span>build<span class="w"> </span>-t<span class="w"> </span>metrics-drivers<span class="w"> </span>-f<span class="w"> </span>docker/Dockerfile<span class="w"> </span>.
 
 
-- Desired output:
+-<span class="w"> </span>Desired<span class="w"> </span>output:
 ...
 
-Successfully built 20d1a201d6ed
-Successfully tagged metrics-drivers:latest
-</code></pre>
+Successfully<span class="w"> </span>built<span class="w"> </span>20d1a201d6ed
+Successfully<span class="w"> </span>tagged<span class="w"> </span>metrics-drivers:latest
+</code></pre></div>
 <p>Create environment file:</p>
-<pre><code class="language-dotenv">FLASK_APP=core
+<div class="highlight"><pre><span></span><code>FLASK_APP=core
 FLASK_ENV=development
 CONFIG=DevConfig
 
-DRIVERS_SETTINGS_SOURCE='TEST'
+DRIVERS_SETTINGS_SOURCE=&#39;TEST&#39;
 DB_USER=your_db_user
 DB_PASSWORD=your_db_password
 DB_HOST=your_db_host
@@ -1216,10 +1238,10 @@ CONSUL_TOKEN=your_consul_token
 SENTRY_DSN=your_sentry_dsn
 
 METRICS_API_BASE=your_metrics_api_base
-</code></pre>
+</code></pre></div>
 <p>Execute the container:</p>
-<pre><code class="language-bash">- docker run --env-file docker/env.docker -it --rm -p 80:80 metrics-drivers
-</code></pre>
+<div class="highlight"><pre><span></span><code>-<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>--env-file<span class="w"> </span>docker/env.docker<span class="w"> </span>-it<span class="w"> </span>--rm<span class="w"> </span>-p<span class="w"> </span><span class="m">80</span>:80<span class="w"> </span>metrics-drivers
+</code></pre></div>
 <h3 id="install-every-component-locally">Install every component locally</h3>
 <p>The second option is meant to be for developers which involves installing
 locally as a step-to-step installation, therefore previous knowledge of Python,
@@ -1229,34 +1251,34 @@ section 2 of this documentation before proceeding with the setup.</p>
 <p>First, clone the repository metrics-drivers: https://gitlab.com/ubiquitypress/metrics-drivers-wrapper</p>
 <p>Set up a virtual environment:</p>
 <p>with Pyenv</p>
-<pre><code class="language-bash">- $ pyenv virtualenv 3.10.6 &lt;name&gt;
-</code></pre>
+<div class="highlight"><pre><span></span><code>-<span class="w"> </span>$<span class="w"> </span>pyenv<span class="w"> </span>virtualenv<span class="w"> </span><span class="m">3</span>.10.6<span class="w"> </span>&lt;name&gt;
+</code></pre></div>
 <p>with Venv</p>
-<pre><code class="language-bash">- $ virtualenv [directory]
-- $ source myvenv/bin/activate
-</code></pre>
+<div class="highlight"><pre><span></span><code>-<span class="w"> </span>$<span class="w"> </span>virtualenv<span class="w"> </span><span class="o">[</span>directory<span class="o">]</span>
+-<span class="w"> </span>$<span class="w"> </span><span class="nb">source</span><span class="w"> </span>myvenv/bin/activate
+</code></pre></div>
 <p>Install requirements</p>
-<pre><code class="language-bash">pip install -r requirements.txt
-</code></pre>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+</code></pre></div>
 <p>Create a file <code>~/.bash_aliases</code>, with the content:</p>
-<pre><code class="language-bash"># ==========================
+<div class="highlight"><pre><span></span><code><span class="c1"># ==========================</span>
 
-# METRICS-DRIVERS-DB-WRAPPER
+<span class="c1"># METRICS-DRIVERS-DB-WRAPPER</span>
 
-# ==========================
+<span class="c1"># ==========================</span>
 
-alias go2metrics-service=&quot;cd ~/Documents/projects/metrics-drivers-wrapper; pyenv activate metrics-drivers&quot;
+<span class="nb">alias</span><span class="w"> </span>go2metrics-service<span class="o">=</span><span class="s2">&quot;cd ~/Documents/projects/metrics-drivers-wrapper; pyenv activate metrics-drivers&quot;</span>
 
-alias with_md_env_=&quot;~/.bash_scripts/load_metrics_drivers_env.bash&quot;
-alias with_md_env_test=&quot;~/.bash_scripts/load_metrics_drivers_env_test.bash&quot;
+<span class="nb">alias</span><span class="w"> </span><span class="nv">with_md_env_</span><span class="o">=</span><span class="s2">&quot;~/.bash_scripts/load_metrics_drivers_env.bash&quot;</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">with_md_env_test</span><span class="o">=</span><span class="s2">&quot;~/.bash_scripts/load_metrics_drivers_env_test.bash&quot;</span>
 
-alias flask_metrics_=&quot;with_md_env_ flask&quot;
-alias flask_metrics_shell=&quot;with_md_env_ flask shell&quot;
-alias flask_metrics_run_tests=&quot;with_md_env_test python -m unittest discover core.tests -t . -v&quot;
-</code></pre>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">flask_metrics_</span><span class="o">=</span><span class="s2">&quot;with_md_env_ flask&quot;</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">flask_metrics_shell</span><span class="o">=</span><span class="s2">&quot;with_md_env_ flask shell&quot;</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">flask_metrics_run_tests</span><span class="o">=</span><span class="s2">&quot;with_md_env_test python -m unittest discover core.tests -t . -v&quot;</span>
+</code></pre></div>
 <p>Create a directory in <code>~/.bash_scripts</code>;
 Create a file called: <code>load_metrics_drivers_env.bash</code> with the content below:</p>
-<pre><code class="language-dotenv">export FLASK_APP=core
+<div class="highlight"><pre><span></span><code>export FLASK_APP=core
 export FLASK_ENV=development
 export CONFIG=DevConfig
 
@@ -1267,82 +1289,82 @@ export RMQ_PASSWORD=password 
 export RMQ_USER=user
 
 
-export DB_USER='your-user'
-export DB_PASSWORD='your-password'
-export DB_HOST='localhost'
-export PORT='5432'
-export DB_NAME='metrics-drivers'
+export DB_USER=&#39;your-user&#39;
+export DB_PASSWORD=&#39;your-password&#39;
+export DB_HOST=&#39;localhost&#39;
+export PORT=&#39;5432&#39;
+export DB_NAME=&#39;metrics-drivers&#39;
 
 
 # Live Values
 
 export TOKENS_KEY=””
 export TRANSLATION_API_BASE=”&quot;
-export DRIVERS_SETTINGS_SOURCE='YAML'
-</code></pre>
+export DRIVERS_SETTINGS_SOURCE=&#39;YAML&#39;
+</code></pre></div>
 <p>Make the above script executable:</p>
-<pre><code class="language-bash">chmod u+x ~/.bash_scripts/load_metrics_drivers_env.bash
-</code></pre>
+<div class="highlight"><pre><span></span><code>chmod<span class="w"> </span>u+x<span class="w"> </span>~/.bash_scripts/load_metrics_drivers_env.bash
+</code></pre></div>
 <p>Add this line to your <code>~/.bashrc</code> file and restart the shell:</p>
-<pre><code class="language-bash">source ~/.bash_aliases
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nb">source</span><span class="w"> </span>~/.bash_aliases
+</code></pre></div>
 <p>Run Database migrations (in your metrics drivers wrapper src folder):</p>
-<pre><code class="language-bash">flask_metrics_ db upgrade
+<div class="highlight"><pre><span></span><code>flask_metrics_<span class="w"> </span>db<span class="w"> </span>upgrade
 
-- Sample output:
+-<span class="w"> </span>Sample<span class="w"> </span>output:
 
-INFO [alembic.runtime.migration] Context impl PostgresqlImpl.
+INFO<span class="w"> </span><span class="o">[</span>alembic.runtime.migration<span class="o">]</span><span class="w"> </span>Context<span class="w"> </span>impl<span class="w"> </span>PostgresqlImpl.
 
-INFO [alembic.runtime.migration] Will assume transactional DDL.
-</code></pre>
+INFO<span class="w"> </span><span class="o">[</span>alembic.runtime.migration<span class="o">]</span><span class="w"> </span>Will<span class="w"> </span>assume<span class="w"> </span>transactional<span class="w"> </span>DDL.
+</code></pre></div>
 <p>Execute the Flask shell to make sure you have access (check whether there are
 any errors):</p>
-<pre><code class="language-bash">flask_metrics_shell
+<div class="highlight"><pre><span></span><code>flask_metrics_shell
 
 
-- Sample output:
+-<span class="w"> </span>Sample<span class="w"> </span>output:
 
-Python 3.10.13 (main, Sep 27 2023, 10:58:53) [GCC 13.2.1 20230801] on linux
+Python<span class="w"> </span><span class="m">3</span>.10.13<span class="w"> </span><span class="o">(</span>main,<span class="w"> </span>Sep<span class="w"> </span><span class="m">27</span><span class="w"> </span><span class="m">2023</span>,<span class="w"> </span><span class="m">10</span>:58:53<span class="o">)</span><span class="w"> </span><span class="o">[</span>GCC<span class="w"> </span><span class="m">13</span>.2.1<span class="w"> </span><span class="m">20230801</span><span class="o">]</span><span class="w"> </span>on<span class="w"> </span>linux
 
-IPython: 8.15.0
-App: core
-Instance: &lt;your metrics-drivers directory&gt;
+IPython:<span class="w"> </span><span class="m">8</span>.15.0
+App:<span class="w"> </span>core
+Instance:<span class="w"> </span>&lt;your<span class="w"> </span>metrics-drivers<span class="w"> </span>directory&gt;
 
-In [1]:
-</code></pre>
+In<span class="w"> </span><span class="o">[</span><span class="m">1</span><span class="o">]</span>:
+</code></pre></div>
 <p>Create a test script file: <code>~/.bash_scripts/load_metrics_drivers_env_test.bash</code>
 with the below content:</p>
-<pre><code class="language-bash">#!/bin/bash
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
 
-export FLASK_APP=core
-export FLASK_ENV=development
-export CONFIG=TestConfig
+<span class="nb">export</span><span class="w"> </span><span class="nv">FLASK_APP</span><span class="o">=</span>core
+<span class="nb">export</span><span class="w"> </span><span class="nv">FLASK_ENV</span><span class="o">=</span>development
+<span class="nb">export</span><span class="w"> </span><span class="nv">CONFIG</span><span class="o">=</span>TestConfig
 
 
-export DB_USER='test-db-user'
-export DB_PASSWORD='test-db-password'
-export DB_HOST='localhost'
-export PORT='5432'
+<span class="nb">export</span><span class="w"> </span><span class="nv">DB_USER</span><span class="o">=</span><span class="s1">&#39;test-db-user&#39;</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">DB_PASSWORD</span><span class="o">=</span><span class="s1">&#39;test-db-password&#39;</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">DB_HOST</span><span class="o">=</span><span class="s1">&#39;localhost&#39;</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">PORT</span><span class="o">=</span><span class="s1">&#39;5432&#39;</span>
 
-export DB_NAME='metrics-drivers-test'
-ARGS=(&quot;$*&quot;)
+<span class="nb">export</span><span class="w"> </span><span class="nv">DB_NAME</span><span class="o">=</span><span class="s1">&#39;metrics-drivers-test&#39;</span>
+<span class="nv">ARGS</span><span class="o">=(</span><span class="s2">&quot;</span><span class="nv">$*</span><span class="s2">&quot;</span><span class="o">)</span>
 
-$ARGS
-</code></pre>
+<span class="nv">$ARGS</span>
+</code></pre></div>
 <p>Make the above script executable:</p>
-<pre><code class="language-bash">chmod u+x ~/.bash_scripts/load_metrics_drivers_env_test.bash    
-</code></pre>
+<div class="highlight"><pre><span></span><code>chmod<span class="w"> </span>u+x<span class="w"> </span>~/.bash_scripts/load_metrics_drivers_env_test.bash<span class="w">    </span>
+</code></pre></div>
 <p>Finally, run your tests:</p>
-<pre><code class="language-bash">$ flask_metrics_run_tests
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>flask_metrics_run_tests
 
-- Desired output:
+-<span class="w"> </span>Desired<span class="w"> </span>output:
 
 ----------------------------------------------------------------------
 
-Ran 13 tests in 0.835s
+Ran<span class="w"> </span><span class="m">13</span><span class="w"> </span>tests<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">0</span>.835s
 
 OK
-</code></pre>
+</code></pre></div>
 
 
 

@@ -1023,6 +1023,28 @@
   
   
     <li class="md-nav__item">
+      <a href="../bot-detection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bot Detection & Reports
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../widget/" class="md-nav__link">
         
   
@@ -1100,9 +1122,9 @@
 <li>the CDN manager (Ubiquity Press) will take care of creating new bundles when the libraries are upgraded, and this
  will happen consistently with the developments in the libraries and the related platforms (Hypothes.is)</li>
 </ul>
-<p>The CDN folders are structure as follows:</p>
-<pre><code>https://storage.googleapis.com/operas/&lt;version&gt;/&lt;name&gt;
-</code></pre>
+<p>The CDN folders are structure as follows:
+<div class="highlight"><pre><span></span><code>https://storage.googleapis.com/operas/&lt;version&gt;/&lt;name&gt;
+</code></pre></div></p>
 <p>Where:</p>
 <p><code>version</code>: version of the JS bundle, (e.g. <code>v1</code>, <code>v2</code>)</p>
 <p><code>name</code>: name of the library</p>
@@ -1139,39 +1161,39 @@
 <h2 id="epub">EPUB</h2>
 <p>At the most basic level, the only resources required to enable annotations on an EPUB are the Hypothes.is CDN, <code>jszip
  3.1.5</code> and <code>epub.js 0.3.66</code>:</p>
-<pre><code>&lt;script src=&quot;https://cdn.hypothes.is/hypothesis&quot;&gt;&lt;/script&gt;
+<div class="highlight"><pre><span></span><code>&lt;script src=&quot;https://cdn.hypothes.is/hypothesis&quot;&gt;&lt;/script&gt;
 &lt;script src=&quot;https://storage.googleapis.com/operas/v1/jszip.min.js&quot;&gt;&lt;/script&gt;
 &lt;script src=&quot;https://storage.googleapis.com/operas/v1/epub.min.js&quot;&gt;&lt;/script&gt;
-</code></pre>
+</code></pre></div>
 <p><a href="https://cdn.hypothes.is/demos/epub/epub.js/index.html?loc=titlepage.xhtml">This link</a> hosted by Hypothes.is contains a working implementation. In the example, a function in <code>reader.js</code> is called
  when loading the page. This function initialises an epub.js reader and enables Hypothes.is annotation throughout the
   page, including within the EPUB content. The code for this working implementation can be found in
   <a href="https://github.com/futurepress/hypothesis-reader">this git repository</a>.</p>
 <h2 id="pdf">PDF</h2>
 <p>To enable annotations on a PDF document embedded in your website using Hypothesis, you will need to include the Hypothesis CDN in your HTML. Below is a simple implementation:</p>
-<pre><code>&lt;script src=&quot;https://hypothesis.is/embed.js&quot;&gt;&lt;/script&gt;
-</code></pre>
-<p>You can embed the PDF using an iframe as follows:</p>
-<pre><code>&lt;iframe src=&quot;https://hyp.is/your-pdf-url.pdf&quot; width=&quot;600&quot; height=&quot;800&quot;&gt;&lt;/iframe&gt;
-</code></pre>
+<div class="highlight"><pre><span></span><code>&lt;script src=&quot;https://hypothesis.is/embed.js&quot;&gt;&lt;/script&gt;
+</code></pre></div>
+<p>You can embed the PDF using an iframe as follows:
+<div class="highlight"><pre><span></span><code>&lt;iframe src=&quot;https://hyp.is/your-pdf-url.pdf&quot; width=&quot;600&quot; height=&quot;800&quot;&gt;&lt;/iframe&gt;
+</code></pre></div></p>
 <p>Make sure to replace 'your-pdf-url.pdf' with the actual URL of your PDF document.</p>
 <p>A more extended sample could be found in <a href="https://github.com/hypothesis/pdf.js-hypothes.is">this git repository</a>.</p>
 <h2 id="embed-dublin-core">Embed Dublin Core</h2>
 <p>It is clear that in order to make easier to calculate metrics around published content, we need to associate the annotations with a unique identifier for the published content, most often the DOI.</p>
 <p>The CrossRef Event Data service scans known websites in order to retrieve URLs for the content and associate them with DOIs. To make this happen, the content page should contain Dublin Core Meta tags.</p>
-<p>Something similar to the following code snippet should be used in order to allow the CrossRef Event Data service to associate a published content page with a DOI:</p>
-<pre><code>&lt;head&gt;
+<p>Something similar to the following code snippet should be used in order to allow the CrossRef Event Data service to associate a published content page with a DOI:
+<div class="highlight"><pre><span></span><code>&lt;head&gt;
     &lt;meta name=&quot;dc.identifier&quot; content=&quot;10.1371/journal.pone.0160617&quot;/&gt;
 &lt;/head&gt;
-</code></pre>
+</code></pre></div></p>
 <p>The Event Data documentation has a <a href="https://www.eventdata.crossref.org/guide/best-practice/publishers-best-practice/">dedicated</a> section on the best practices for publishers.</p>
 <h2 id="check-the-hirmeos-metrics-api">Check the HIRMEOS Metrics API</h2>
 <p>What happens next:
 - CrossRef Event Data will crawl the pages for annotations
 - the HIRMEOS Metrics service will gather information on the Event Data API</p>
-<p>The results are available on the HIRMEOS metrics, by source:</p>
-<pre><code>https://metrics-api.operas-eu.org/events?filter=work_uri:info:doi:10.5334/bbc,measure_uri:https://metrics.operas-eu.org/hypothesis/annotations/v1
-</code></pre>
+<p>The results are available on the HIRMEOS metrics, by source:
+<div class="highlight"><pre><span></span><code>https://metrics-api.operas-eu.org/events?filter=work_uri:info:doi:10.5334/bbc,measure_uri:https://metrics.operas-eu.org/hypothesis/annotations/v1
+</code></pre></div></p>
 
 
 

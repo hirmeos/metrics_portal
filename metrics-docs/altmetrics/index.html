@@ -1029,6 +1029,28 @@
   
   
     <li class="md-nav__item">
+      <a href="../bot-detection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bot Detection & Reports
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../widget/" class="md-nav__link">
         
   
@@ -1106,24 +1128,24 @@
 <p><strong>Example: Assuming a user registers with the following credentials</strong>
 - <strong>email:</strong> test.user@gmail.com
 - <strong>password:</strong> test-password-123</p>
-<p>With <em>curl</em>, this can be done as either</p>
-<pre><code>curl -u test.user@gmail.com:test-password-123 https://altmetrics.operas-eu.org/api/get_token
-</code></pre>
-<p>or using the base64 encoding of <em>username:password</em></p>
-<pre><code>curl --header &quot;Authorization: Basic dGVzdC51c2VyQGdtYWlsLmNvbTp0ZXN0LXBhc3N3b3JkLTEyMw==&quot; https://altmetrics.operas-eu.org/api/get_token
-</code></pre>
+<p>With <em>curl</em>, this can be done as either
+<div class="highlight"><pre><span></span><code>curl -u test.user@gmail.com:test-password-123 https://altmetrics.operas-eu.org/api/get_token
+</code></pre></div>
+or using the base64 encoding of <em>username:password</em>
+<div class="highlight"><pre><span></span><code>curl --header &quot;Authorization: Basic dGVzdC51c2VyQGdtYWlsLmNvbTp0ZXN0LXBhc3N3b3JkLTEyMw==&quot; https://altmetrics.operas-eu.org/api/get_token
+</code></pre></div></p>
 <h3 id="token-bearer-schema">Token Bearer schema</h3>
-<p>Once you have a token, all requests to the Altmetrics API will require you to use this token to authenticate yourself. To do this, simply add the token to your request header, as follows.</p>
-<pre><code>Authorization: Bearer [token]
-</code></pre>
+<p>Once you have a token, all requests to the Altmetrics API will require you to use this token to authenticate yourself. To do this, simply add the token to your request header, as follows.
+<div class="highlight"><pre><span></span><code>Authorization: Bearer [token]
+</code></pre></div></p>
 <p>Where <em>[token]</em> represents your JWT.</p>
 <h3 id="registering-dois">Registering DOIs</h3>
 <p>You can post the DOIs of works to the Altmetrics API.</p>
 <p><strong>API endpoint:</strong> https://altmetrics.operas-eu.org/api/uriset</p>
 <p><strong>Method:</strong> <em>POST</em></p>
 <p><strong>JSON format:</strong> The Altmetrics API expects to receive JSON, containing a list of DOIs in the format shown below. Each
- DOI can be registered with zero or more URLs.</p>
-<pre><code>[
+ DOI can be registered with zero or more URLs.
+<div class="highlight"><pre><span></span><code>[
     {
         &quot;doi&quot;: DOI
         &quot;url&quot;: [
@@ -1133,7 +1155,7 @@
         ]
     }
 ]
-</code></pre>
+</code></pre></div></p>
 <p>Refer to postman JSON for an example call to this API endpoint.</p>
 <h3 id="querying-dois">Querying DOIs</h3>
 <p>Check all DOIs associated with your user account. Remember to authenticate yourself with your JWT.</p>
